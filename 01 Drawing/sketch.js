@@ -17,6 +17,6 @@ function draw() {
   fill(196);
   rect(150, 150, 200, 200);
 
-  fill(220;
+  fill(220);
   rect(300, 300, 400, 400);
 }
