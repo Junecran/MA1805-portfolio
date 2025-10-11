@@ -13,21 +13,21 @@ arc(340, 175, 90, 82, PI + QUARTER_PI, TWO_PI);
 // bottom_face.
 arc(310, 175, 30, 50, HALF_PI, PI);
 arc(375, 175, 20, 50, 0, HALF_PI);
-// eye.
-fill(100, 500, 500); // left_eye.
+// left_eye.
+fill(500, 500, 500); 
 push();
 translate(315, 155);
 rotate(radians(147));
 ellipse(0, 0, 43, 35);
 pop();
-
-push(); // right-eye.
+// right-eye.
+push(); 
 translate(367, 154);
 rotate(radians(40));
 ellipse(0, 0, 50, 30);
 pop();
-
-noFill(); // irises. 
+// irises. 
+noFill(); 
 push();
 translate(312, 154);
 rotate(radians(26));
@@ -38,18 +38,38 @@ translate(365,152);
 rotate(radians(178))
 ellipse(0, 0, 4, 8);
 pop();
+// eye_bags.
+arc(330, 162, 10, 16, 0, HALF_PI, PI);
+arc(358, 164, 14, 13, HALF_PI, PI); 
 // mouth.
 arc(340, 200, 52, 39, PI, PI + HALF_PI);
 arc(345, 185, 23, 10, PI + QUARTER_PI, TWO_PI);
+push();
+translate(355, 193);
+rotate(radians(42));
+arc(0, 0, 18, 20, PI + QUARTER_PI, TWO_PI);
+pop();
+// teeth.
+line(324, 196, 317, 190);
+line(324, 195, 322, 185);
+line(333, 190, 332, 182);
+line(333, 190, 339, 181);
+line(343, 190, 344, 182);
+line(343, 190, 349, 181);
+line(352, 193, 362, 185);
+line(353, 194, 364, 196);
 
 
-
-
-
-noFill();
     // left_arm //
+noFill();
 arc(295, 180, 50, 10, PI, PI + QUARTER_PI);
 arc(286, 198, 40, 60, PI, PI + QUARTER_PI);
+// shake.
+arc(250, 260, 30, 40, 2, PI, PI + QUARTER_PI);
+arc(239, 276, 5, 20, 0, HALF_PI, PI); 
+arc(253, 290, 14, 13, HALF_PI, PI); 
+arc(407, 278, 7, 20, 0, HALF_PI, PI);
+arc(410, 274, 7, 10, 0, HALF_PI, PI); 
 // first_finger.
 arc(274, 260, 50, 10, PI, PI + QUARTER_PI); 
 arc(269, 258, 10, 6, PI + QUARTER_PI, TWO_PI); // tip_line.
@@ -86,6 +106,7 @@ arc(398, 275, 5, 20, 0, HALF_PI, PI); // knuckle_line.
 
    // computer //
 line(390, 200, 250, 200);
+line(405, 304, 275, 304);
 // left_side.
 line(250, 200, 257, 256);
 line(264, 290, 265, 300);
