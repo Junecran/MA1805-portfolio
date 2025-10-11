@@ -5,7 +5,7 @@ function setup() {
 }
 
 function draw() {
-
+noFill();
     // head //
 // top_face.
 arc(340, 175, 90, 82, PI, PI + HALF_PI);
@@ -13,16 +13,40 @@ arc(340, 175, 90, 82, PI + QUARTER_PI, TWO_PI);
 // bottom_face.
 arc(310, 175, 30, 50, HALF_PI, PI);
 arc(375, 175, 20, 50, 0, HALF_PI);
-// eyes.
-fill(50,60,30)
-arc(210, 175, 30, 50, HALF_PI, PI);
-//
+// eye.
+fill(100, 500, 500); // left_eye.
+push();
+translate(315, 155);
+rotate(radians(147));
+ellipse(0, 0, 43, 35);
+pop();
+
+push(); // right-eye.
+translate(367, 154);
+rotate(radians(40));
+ellipse(0, 0, 50, 30);
+pop();
+
+noFill(); // irises. 
+push();
+translate(312, 154);
+rotate(radians(26));
+ellipse(0, 0, 4, 7);
+pop();
+push();
+translate(365,152);
+rotate(radians(178))
+ellipse(0, 0, 4, 8);
+pop();
+// mouth.
+arc(340, 200, 52, 39, PI, PI + HALF_PI);
+arc(345, 185, 23, 10, PI + QUARTER_PI, TWO_PI);
+
+
+
+
+
 noFill();
-
-
-
-
-
     // left_arm //
 arc(295, 180, 50, 10, PI, PI + QUARTER_PI);
 arc(286, 198, 40, 60, PI, PI + QUARTER_PI);
