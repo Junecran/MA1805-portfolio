@@ -1,51 +1,103 @@
 function setup() {
   createCanvas(640, 480);
-  background(400);
+  background(300);
 
 }
 
 function draw() {
 
-    // colour//
-let w1 = color(500, 500, 500); 
-let bc = color(200, 200, 200); // body_colour.
+    // mouse_coordinates // 
+// turned on // to limit the trial and error in placing objects. 
+background(300);
+text(`x: ${mouseX} y: ${mouseY}`, 50, 50);
+stroke(0); 
+
+
+   // colours_key // for easy access.
+let bc = color(250, 204, 0); // body.
+let cct = color(200, 200, 200); // computer_top.
+let ccb = color(100, 100, 100); // computer_bottom.
+let eyew = color(300, 300, 300); // eye_whites.
+let mc = color(300, 300, 300); // mouth.
+let tc = color(100, 100, 100); // teeth.
+
+
+   // colours //
+// computer_colour.
+push();
+fill(cct);
+noStroke();
+quad(249, 200, 390, 200, 400, 300, 265, 300);
+fill(ccb)
+noStroke();
+quad(265, 300, 320, 330, 470, 334, 400, 300);
+pop();
+// body_colour.
 fill(bc);
 noStroke();
 rect(310, 170, 65, 30);
-
-
-
-    // head //
+rect(376, 181, 47, 19, 9);
+quad(422, 196, 390, 200, 394, 244, 420, 230);
+quad(270, 178, 294, 175, 307, 200, 265, 200);
+quad(394, 236, 419, 226, 418, 243, 399, 276);
+ellipse(407, 255, 24, 28);
+// left_hand_colour.
+rect(247, 256, 28, 9, 5);
+rect(253, 262, 25, 20, 5);
+rect(255, 281, 17, 9, 5);
+// right_hand_colour.
+rect(371, 249, 34, 17, 50, 50, 50, 5);
+rect(378, 265, 23, 19, 5, 0, 5, 10);
+// head_colour_outline.
 stroke(1);
-// top_face.
 arc(340, 175, 90, 82, PI, PI + HALF_PI);
 arc(340, 175, 90, 82, PI + QUARTER_PI, TWO_PI);
-// bottom_face.
 arc(310, 175, 30, 50, HALF_PI, PI);
 arc(375, 175, 20, 50, 0, HALF_PI);
+// mouth_colour.
+push();
+fill(mc);
+noStroke();
+translate(340, 211);
+rotate(5.9);
+arc(0, 0, 59, 62, PI + QUARTER_PI, TWO_PI, CHORD);
+arc(7, 0, 47, 58, PI + QUARTER_PI, TWO_PI, CHORD);
+pop();
+// teeth_colour.
+noStroke();
+fill(tc)
+triangle(318, 190, 322, 186, 323, 194);
+triangle(331, 182, 338, 181, 333, 188);
+triangle(344, 181, 349, 181, 343, 188);
+triangle(360, 186, 367, 196, 353, 193);
+
+
+   // face_outline //
+stroke(1)
 // left_eye.
-fill(500, 500, 500); 
+fill(eyew); 
 push();
 translate(315, 155);
-rotate(radians(147));
+rotate(9);
 ellipse(0, 0, 43, 35);
 pop();
-// right-eye.
+// right_eye.
 push(); 
 translate(367, 154);
-rotate(radians(40));
+rotate(7);
 ellipse(0, 0, 50, 30);
 pop();
-// irises. 
-noFill(); 
+// left_iris.
+noFill(eyew); 
 push();
 translate(312, 154);
-rotate(radians(26));
+rotate(3.4);
 ellipse(0, 0, 4, 7);
 pop();
+// right_iris.
 push();
 translate(365,152);
-rotate(radians(178));
+rotate(3);
 ellipse(0, 0, 4, 8);
 pop();
 // eye_bags.
@@ -55,9 +107,9 @@ arc(358, 164, 14, 13, HALF_PI, PI);
 arc(340, 200, 52, 39, PI, PI + HALF_PI);
 arc(345, 185, 23, 10, PI + QUARTER_PI, TWO_PI);
 push();
-translate(355, 193);
-rotate(radians(42));
-arc(0, 0, 18, 20, PI + QUARTER_PI, TWO_PI);
+translate(357, 193);
+rotate(7);
+arc(0, 0, 20, 16, PI + QUARTER_PI, TWO_PI);
 pop();
 // teeth.
 line(324, 196, 317, 190);
@@ -70,16 +122,10 @@ line(352, 193, 362, 185);
 line(353, 194, 364, 196);
 
 
-    // left_arm //
+   // left_arm_outline //
 noFill();
 arc(295, 180, 50, 10, PI, PI + QUARTER_PI);
 arc(286, 198, 40, 60, PI, PI + QUARTER_PI);
-// shake.
-arc(250, 260, 30, 40, 2, PI, PI + QUARTER_PI);
-arc(239, 276, 5, 20, 0, HALF_PI, PI); 
-arc(253, 290, 14, 13, HALF_PI, PI); 
-arc(407, 278, 7, 20, 0, HALF_PI, PI);
-arc(410, 274, 7, 10, 0, HALF_PI, PI); 
 // first_finger.
 arc(274, 260, 50, 10, PI, PI + QUARTER_PI); 
 arc(269, 258, 10, 6, PI + QUARTER_PI, TWO_PI); // tip_line.
@@ -95,7 +141,7 @@ arc(270, 283, 5, 11, 0, HALF_PI, PI); // tip_line.
 arc(276, 284, 43, 5, PI, PI + QUARTER_PI); 
 
 
-    // right_arm //
+   // right_arm_outline //
 arc(402, 190, 40, 20, PI + QUARTER_PI, TWO_PI);
 arc(415, 191, 15, 105, 0, HALF_PI, PI);   
 // forearm.                     
@@ -113,6 +159,12 @@ arc(399, 273, 36, 7, HALF_PI, PI);
 arc(400, 282, 29, 4, HALF_PI, PI);
 arc(398, 275, 5, 20, 0, HALF_PI, PI); // knuckle_line.
 
+   // shake //
+arc(250, 260, 30, 40, 2, PI, PI + QUARTER_PI);
+arc(239, 276, 5, 20, 0, HALF_PI, PI); 
+arc(253, 290, 14, 13, HALF_PI, PI); 
+arc(407, 278, 7, 20, 0, HALF_PI, PI);
+arc(410, 274, 7, 10, 0, HALF_PI, PI); 
 
    // computer //
 line(390, 200, 250, 200);
