@@ -5,6 +5,7 @@ function setup() {
 }
 
 function draw() {
+
     // head //
 // top_face.
 arc(340, 175, 90, 82, PI, PI + HALF_PI);
@@ -12,6 +13,14 @@ arc(340, 175, 90, 82, PI + QUARTER_PI, TWO_PI);
 // bottom_face.
 arc(310, 175, 30, 50, HALF_PI, PI);
 arc(375, 175, 20, 50, 0, HALF_PI);
+// eyes.
+fill(50,60,30)
+arc(210, 175, 30, 50, HALF_PI, PI);
+//
+noFill();
+
+
+
 
 
     // left_arm //
@@ -29,8 +38,7 @@ arc(258, 265, 10, 50, HALF_PI, PI); // knuckle_line.
 arc(257, 287, 30, 7, 0, HALF_PI, PI);
 // pinkie.
 arc(270, 283, 5, 11, 0, HALF_PI, PI); // tip_line.
-arc(276, 284, 43, 5, PI, PI + QUARTER_PI); // pink line
-
+arc(276, 284, 43, 5, PI, PI + QUARTER_PI); 
 
 
     // right_arm //
@@ -38,30 +46,28 @@ arc(402, 190, 40, 20, PI + QUARTER_PI, TWO_PI);
 arc(415, 191, 15, 105, 0, HALF_PI, PI);   
 // forearm.                     
 arc(410, 252, 20, 20, PI + QUARTER_PI, TWO_PI); 
-arc(400, 250, 40, 40, 0, HALF_PI, PI); 
+arc(403, 250, 34, 40, 0, HALF_PI, PI); 
 // first_fingers.
-arc(385, 260, 40, 20, PI + QUARTER_PI, TWO_PI); 
-arc(388, 262, 32, 32, PI, PI + QUARTER_PI); // tip_line.
-arc(400, 261, 11, 15, 0, HALF_PI, PI); // knuckle_line.
-arc(398, 266, 50, 5, HALF_PI, PI); 
-// other_fingers.
-arc(389, 267, 30, 21, HALF_PI, PI); // tip_line.
-arc(398, 270, 7, 15, 0, HALF_PI, PI); // knuckle_line.
-arc(398, 276, 29, 4, HALF_PI, PI); 
+arc(386, 258, 40, 20, PI + QUARTER_PI, TWO_PI); 
+arc(390, 261, 40, 30, PI, PI + QUARTER_PI); // tip_line.
+arc(401, 258, 10, 12, 0, HALF_PI, PI); // knuckle_line.
+arc(398, 264, 50, 5, HALF_PI, PI); 
+// other_finger.
+arc(385, 267, 14, 30, HALF_PI, PI); // tip_line.
+arc(400, 265, 7, 20, 0, HALF_PI, PI); // knuckle_line.
+arc(399, 273, 36, 7, HALF_PI, PI); 
+arc(400, 282, 29, 4, HALF_PI, PI);
+arc(398, 275, 5, 20, 0, HALF_PI, PI); // knuckle_line.
 
 
-
-
-  // computer //
+   // computer //
 line(390, 200, 250, 200);
 // left_side.
 line(250, 200, 257, 256);
 line(264, 290, 265, 300);
 // right_side.
-line(390, 200, 395, 251); 
-line(397, 278, 400, 300); 
+line(390, 200, 395, 249); 
+line(398, 283, 400, 300); 
 // bottom.
-quad(265, 300, 320, 330, 470, 334, 400, 300) 
-
-noFill();
+quad(265, 300, 320, 330, 470, 334, 400, 300);
 }
