@@ -5,8 +5,18 @@ function setup() {
 }
 
 function draw() {
-noFill();
+
+    // colour//
+let w1 = color(500, 500, 500); 
+let bc = color(200, 200, 200); // body_colour.
+fill(bc);
+noStroke();
+rect(310, 170, 65, 30);
+
+
+
     // head //
+stroke(1);
 // top_face.
 arc(340, 175, 90, 82, PI, PI + HALF_PI);
 arc(340, 175, 90, 82, PI + QUARTER_PI, TWO_PI);
@@ -35,7 +45,7 @@ ellipse(0, 0, 4, 7);
 pop();
 push();
 translate(365,152);
-rotate(radians(178))
+rotate(radians(178));
 ellipse(0, 0, 4, 8);
 pop();
 // eye_bags.
