@@ -1,28 +1,57 @@
 function setup() {
-  createCanvas(640, 480);
+  createCanvas(450,450);
   background(300);
 
 }
 
 function draw() {
 
-    // mouse_coordinates // 
-// turned on // to limit the trial and error in placing objects. 
+   // drawing tools //
+// mouse coordinates // to limit the trial and error in placing objects. // turned on //
 background(300);
-text(`x: ${mouseX} y: ${mouseY}`, 50, 50);
+text(`x: ${mouseX} y: ${mouseY}`, 150, 150);
 stroke(0); 
+// Image // to move the emoji around the canvas.
+push();
+//translate(-140, -30);
 
 
-   // colours_key // for easy access.
-let bc = color(250, 204, 0); // body.
-let cct = color(200, 200, 200); // computer_top.
-let ccb = color(100, 100, 100); // computer_bottom.
+   // customize_key // for easy access.
+let bc = color(217, 165, 98); // body.
+let sc = color(235, 196, 145); // shading_colour.
+let dsc = color(163, 111, 52); //  darker_shading_colour.
+let cct = color(43, 44, 66); // computer_top.
+let ccb = color(31, 32, 48); // computer_bottom.
 let eyew = color(300, 300, 300); // eye_whites.
-let mc = color(300, 300, 300); // mouth.
-let tc = color(100, 100, 100); // teeth.
-
+let eyei = color(200, 200, 200); // eye_irises.
+let mc = color(97, 58, 37); // mouth.
+let tc = color(299, 299, 299); // teeth.
+let lc = color(0, 0, 0); // line_color.
+let o = 2 // outline_weight.
 
    // colours //
+// body_colour.
+fill(bc);
+noStroke();
+rect(375, 181, 47, 19, 0, 15, 0, 0);
+quad(422, 196, 390, 200, 394, 244, 420, 230);
+quad(270, 179, 294, 175, 307, 200, 265, 200);
+quad(394, 236, 420, 226, 417, 242, 399, 276);
+push();
+translate(407, 255);
+rotate(0.5)
+ellipse(0, 0, 24, 30);
+pop();
+// body_shading.
+push();
+fill(sc)
+rect(280, 188, 130, 53, 10);
+pop();
+push();
+fill(bc);
+noStroke();
+rect(310, 170, 65, 30);
+pop();
 // computer_colour.
 push();
 fill(cct);
@@ -32,109 +61,116 @@ fill(ccb)
 noStroke();
 quad(265, 300, 320, 330, 470, 334, 400, 300);
 pop();
-// body_colour.
-fill(bc);
-noStroke();
-rect(310, 170, 65, 30);
-rect(376, 181, 47, 19, 9);
-quad(422, 196, 390, 200, 394, 244, 420, 230);
-quad(270, 178, 294, 175, 307, 200, 265, 200);
-quad(394, 236, 419, 226, 418, 243, 399, 276);
-ellipse(407, 255, 24, 28);
 // left_hand_colour.
-rect(247, 256, 28, 9, 5);
-rect(253, 262, 25, 20, 5);
+rect(249, 256, 25, 9, 50, 50, 50, 0);
+rect(252, 261, 26, 23, 0, 5, 10, 5);
 rect(255, 281, 17, 9, 5);
 // right_hand_colour.
-rect(371, 249, 34, 17, 50, 50, 50, 5);
-rect(378, 265, 23, 19, 5, 0, 5, 10);
+rect(376, 251, 25, 23, 50, 50, 5, 5);
+rect(381, 273.5, 20, 9, 0, 0, 50, 5);
 // head_colour_outline.
-stroke(1);
+stroke(dsc);
+strokeWeight(o) 
 arc(340, 175, 90, 82, PI, PI + HALF_PI);
 arc(340, 175, 90, 82, PI + QUARTER_PI, TWO_PI);
 arc(310, 175, 30, 50, HALF_PI, PI);
 arc(375, 175, 20, 50, 0, HALF_PI);
+// shading. needs to be here for the order
+push()
+noStroke();
+fill(sc)
+ellipse(340, 166, 70, 60);
+pop();
 // mouth_colour.
 push();
 fill(mc);
 noStroke();
-translate(340, 211);
+translate(339, 210);
 rotate(5.9);
-arc(0, 0, 59, 62, PI + QUARTER_PI, TWO_PI, CHORD);
-arc(7, 0, 47, 58, PI + QUARTER_PI, TWO_PI, CHORD);
+arc(0, 0, 50, 59, PI + QUARTER_PI, TWO_PI, CHORD);
+arc(7, 1, 47, 58, PI + QUARTER_PI, TWO_PI, CHORD);
 pop();
 // teeth_colour.
 noStroke();
 fill(tc)
 triangle(318, 190, 322, 186, 323, 194);
-triangle(331, 182, 338, 181, 333, 188);
-triangle(344, 181, 349, 181, 343, 188);
-triangle(360, 186, 367, 196, 353, 193);
+triangle(325, 184, 334, 181, 333, 190);
+triangle(344, 180, 353, 182, 347, 189);
+triangle(360, 189, 367, 196, 353, 194);
 
 
    // face_outline //
-stroke(1)
+stroke(dsc);
+strokeWeight(o) 
 // left_eye.
 fill(eyew); 
 push();
+stroke(lc);
 translate(315, 155);
 rotate(9);
 ellipse(0, 0, 43, 35);
 pop();
 // right_eye.
 push(); 
+stroke(lc);
 translate(367, 154);
 rotate(7);
 ellipse(0, 0, 50, 30);
 pop();
 // left_iris.
-noFill(eyew); 
 push();
-translate(312, 154);
+fill(eyei);
+stroke(lc);
+translate(310, 154);
 rotate(3.4);
-ellipse(0, 0, 4, 7);
+ellipse(0, 0, 8, 11);
 pop();
 // right_iris.
 push();
-translate(365,152);
+fill(eyei);
+stroke(lc);
+translate(370,151);
 rotate(3);
-ellipse(0, 0, 4, 8);
+ellipse(0, 0, 8, 12);
 pop();
 // eye_bags.
-arc(330, 162, 10, 16, 0, HALF_PI, PI);
-arc(358, 164, 14, 13, HALF_PI, PI); 
+noFill()
+arc(320, 163, 27, 25.8, 13, HALF_PI, PI);
+arc(378, 172, 38, 13,  HALF_PI, PI); 
 // mouth.
 arc(340, 200, 52, 39, PI, PI + HALF_PI);
-arc(345, 185, 23, 10, PI + QUARTER_PI, TWO_PI);
+arc(343, 185, 25.5, 9, PI + QUARTER_PI, TWO_PI);
 push();
-translate(357, 193);
+translate(357, 191);
 rotate(7);
-arc(0, 0, 20, 16, PI + QUARTER_PI, TWO_PI);
+arc(0, 0, 27, 8, PI + QUARTER_PI, TWO_PI);
 pop();
 // teeth.
-line(324, 196, 317, 190);
-line(324, 195, 322, 185);
-line(333, 190, 332, 182);
-line(333, 190, 339, 181);
-line(343, 190, 344, 182);
-line(343, 190, 349, 181);
-line(352, 193, 362, 185);
-line(353, 194, 364, 196);
+stroke(lc);
+line(323, 195, 319, 191);
+line(323, 195, 323, 187.6);
+line(333, 190, 326, 186);
+line(333, 190, 334, 183);
+line(347, 190, 344, 182);
+line(347, 190, 353, 184);
+line(352, 194, 358, 189);
+line(353, 194, 365, 197);
 
 
    // left_arm_outline //
 noFill();
-arc(295, 180, 50, 10, PI, PI + QUARTER_PI);
+stroke(dsc);
+arc(294.6, 181, 50, 10, PI, PI + QUARTER_PI);
 arc(286, 198, 40, 60, PI, PI + QUARTER_PI);
 // first_finger.
 arc(274, 260, 50, 10, PI, PI + QUARTER_PI); 
-arc(269, 258, 10, 6, PI + QUARTER_PI, TWO_PI); // tip_line.
-arc(255, 265, 15, 20, PI, PI + QUARTER_PI); // knuckle_line.
+arc(269, 257.8, 10, 5, PI + QUARTER_PI, TWO_PI); // tip_line.
+arc(255, 265, 14, 20, PI, PI + QUARTER_PI); // knuckle_line.
 arc(249, 259, 50, 14, 0, HALF_PI, PI);
 // other_fingers.
-arc(274, 266, 9, 7, PI + QUARTER_PI, TWO_PI); // tip_line_t.
-arc(274, 265, 10, 32, 0, HALF_PI, PI); // tip_line_b.
-arc(258, 265, 10, 50, HALF_PI, PI); // knuckle_line.
+arc(274, 265, 9, 7, PI + QUARTER_PI, TWO_PI); // tip_line_t.
+arc(273, 265, 11, 33, 0, HALF_PI, PI); // tip_line_b.
+arc(257, 266, 10, 49, HALF_PI, PI); // knuckle_line.
 arc(257, 287, 30, 7, 0, HALF_PI, PI);
 // pinkie.
 arc(270, 283, 5, 11, 0, HALF_PI, PI); // tip_line.
@@ -142,39 +178,48 @@ arc(276, 284, 43, 5, PI, PI + QUARTER_PI);
 
 
    // right_arm_outline //
-arc(402, 190, 40, 20, PI + QUARTER_PI, TWO_PI);
+arc(402.5, 190.2, 40, 20, PI + QUARTER_PI, TWO_PI);
 arc(415, 191, 15, 105, 0, HALF_PI, PI);   
 // forearm.                     
 arc(410, 252, 20, 20, PI + QUARTER_PI, TWO_PI); 
 arc(403, 250, 34, 40, 0, HALF_PI, PI); 
 // first_fingers.
-arc(386, 258, 40, 20, PI + QUARTER_PI, TWO_PI); 
-arc(390, 261, 40, 30, PI, PI + QUARTER_PI); // tip_line.
-arc(401, 258, 10, 12, 0, HALF_PI, PI); // knuckle_line.
-arc(398, 264, 50, 5, HALF_PI, PI); 
+arc(389, 261, 34, 20, PI + QUARTER_PI, TWO_PI); 
+arc(393, 263, 35, 30, PI, PI + QUARTER_PI); // tip_line.
+arc(401, 260, 10, 12, 0, HALF_PI, PI); // knuckle_line.
+arc(399, 264, 47, 5, HALF_PI, PI); 
 // other_finger.
-arc(385, 267, 14, 30, HALF_PI, PI); // tip_line.
-arc(400, 265, 7, 20, 0, HALF_PI, PI); // knuckle_line.
-arc(399, 273, 36, 7, HALF_PI, PI); 
-arc(400, 282, 29, 4, HALF_PI, PI);
-arc(398, 275, 5, 20, 0, HALF_PI, PI); // knuckle_line.
+arc(387, 274, 13, 17, HALF_PI, PI); // tip_line.
+arc(382, 265, 13, 17, HALF_PI, PI); // tip_line.
+arc(399, 266, 7, 18, 0, HALF_PI, PI); // knuckle_line.
+arc(400, 272.7, 41, 5, HALF_PI, PI); 
+arc(397.8, 282, 24, 3, HALF_PI, PI);
+arc(398, 275, 5, 17, 0, HALF_PI, PI); // knuckle_line.
 
-   // shake //
+   // details //
+stroke(lc);
 arc(250, 260, 30, 40, 2, PI, PI + QUARTER_PI);
-arc(239, 276, 5, 20, 0, HALF_PI, PI); 
+arc(240, 277, 5, 20, 0, HALF_PI, PI); 
 arc(253, 290, 14, 13, HALF_PI, PI); 
-arc(407, 278, 7, 20, 0, HALF_PI, PI);
+arc(406, 279, 7, 20, 0, HALF_PI, PI);
 arc(410, 274, 7, 10, 0, HALF_PI, PI); 
+line(337, 200, 336, 232);
+line(337, 220, 351, 225);
+line(350, 225, 353, 235);
+line(335, 226, 318, 248);
+line(321, 242, 307, 239);
 
    // computer //
 line(390, 200, 250, 200);
 line(405, 304, 275, 304);
 // left_side.
-line(250, 200, 257, 256);
-line(264, 290, 265, 300);
+line(250, 200, 257, 254.5);
+line(264, 292, 265, 300);
 // right_side.
-line(390, 200, 395, 249); 
-line(398, 283, 400, 300); 
+line(390, 200, 395, 249.8); 
+line(398, 286, 400, 300); 
 // bottom.
-quad(265, 300, 320, 330, 470, 334, 400, 300);
+quad(268, 301, 320, 330, 470, 334, 400, 300);
+pop();
+
 }
