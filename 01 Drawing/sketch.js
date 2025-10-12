@@ -7,11 +7,6 @@ function setup() {
 function draw() {
 
     // drawing tools //
-// mouse coordinates / to limit the trial and error in placing objects. // turned off //
-//background(250);
-//text(`x: ${mouseX} y: ${mouseY}`, 50, 50);
-//stroke(0); 
-
 // Image / to move the emoji around the canvas.
 push();
 translate(-140, -30);
@@ -228,8 +223,3 @@ line(266, 305, 399, 305);
 pop();
 
 }
-
-// computer_option_open //
-// line(405, 304, 275, 304);
-// lines_quad(268, 301, 320, 330, 470, 334, 400, 300);
-// colour_quad(265, 300, 320, 330, 470, 334, 400, 300);
