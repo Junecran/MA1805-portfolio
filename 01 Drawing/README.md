@@ -6,7 +6,7 @@ The emoji represents the challenging relationship between humans and technology.
 My own experiences with coding capture this tension: I enjoy it, but its tedious and frustrating moments made me want to bite my laptop—a sentiment some can relate to. This feeling directly inspired the imagery of the emoji.
 
 ## Extra code comments  
- **mouse coordinates tool made to limit the trial and error in placing objects.**
+ **mouse coordinates tool made to limit the trial and error in placing objects.** // Made with using p5.js References
 
      background(250);
      (`x: ${mouseX} y: ${mouseY}`, 50, 50);
@@ -17,3 +17,7 @@ My own experiences with coding capture this tension: I enjoy it, but its tedious
      line(405, 304, 275, 304);
      lines_quad(268, 301, 320, 330, 470, 334, 400, 300);
      colour_quad(265, 300, 320, 330, 470, 334, 400, 300);
+
+# Refernces Used
+
+- p5.js References 
