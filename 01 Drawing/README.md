@@ -1,5 +1,4 @@
-# O1 Drawing
-**MA1805-portfolio**
+# MA1805-portfolio **Drawing**
 
 The emoji represents the challenging relationship between humans and technology. Whether caused by computer crashes resulting in lost work, programming language barriers, or anxieties about AI's influence, we must navigate both the benefits and drawbacks in our tech-centered lives.
 
