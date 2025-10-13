@@ -5,22 +5,22 @@ function setup() {
 }
 
 function draw() {
-// Image / to move the emoji around the canvas.
+// Image / To move the emoji around the canvas.
 push();
 translate(-140, -30);
 
-// customize_key / for easy access.
-let bc = color(79, 15, 15); // body.
-let sc = color(122, 33, 33); // light_shading_colour.
-let dsc = color(31, 6, 6); //  darker_shading_colour.
-let cct = color(53, 51, 82); // computer_top.
-let ccb = color(28, 27, 46); // computer_bottom.
-let eyew = color(250, 250, 250); // eye_whites.
-let eyei = color(0, 0, 0); // eye_iris.
-let mc = color(48, 10, 10); // mouth.
-let tc = color(250, 250, 250); // teeth.
-let lc = color(10, 3, 28); // line_color.
-let o = 2; // outline_weight.
+// Customize Key / For easy access
+let bc = color(79, 15, 15); // Body
+let eyew = color(250, 250, 250); // Eye whites
+let eyei = color(0, 0, 0); // Eye iris
+let mc = color(48, 10, 10); // Mouth
+let tc = color(250, 250, 250); // Teeth
+let cct = color(53, 51, 82); // Computer Top
+let ccb = color(28, 27, 46); // Computer Bottom
+let sc = color(122, 33, 33); //Shading 
+let lc = color(10, 3, 28); //Main Outline 
+let dsc = color(31, 6, 6); //Second Outline 
+let o = 2; // Outline weight
 
 
     // colours //
