@@ -9,27 +9,27 @@ function draw() {
 push();
 translate(-140, -30);
 
-// Customize Key / For easy access
+// Customize Key / For easy access.
 let bc = color(79, 15, 15); // Body
 let eyew = color(250, 250, 250); // Eye whites
 let eyei = color(0, 0, 0); // Eye iris
 let mc = color(48, 10, 10); // Mouth
 let tc = color(250, 250, 250); // Teeth
-let cct = color(53, 51, 82); // Computer Top
-let ccb = color(28, 27, 46); // Computer Bottom
-let sc = color(122, 33, 33); //Shading 
-let lc = color(10, 3, 28); //Main Outline 
-let dsc = color(31, 6, 6); //Second Outline 
+let cct = color(53, 51, 82); // Computer top
+let ccb = color(28, 27, 46); // Computer bottom
+let sc = color(122, 33, 33); // Shading 
+let lc = color(10, 3, 28); // Main outline 
+let dsc = color(31, 6, 6); // Second outline 
 let o = 2; // Outline weight
 
 
-    // colours //
-push(); //computer_shading/ here for order.
+    // Colours //
+push(); // Computer shading here for order.
   fill(ccb);
   noStroke();
   triangle(400, 306.2, 416, 271, 375, 271);
 pop();
-// body_colour.
+// Body colour
 fill(bc);
 noStroke();
 rect(375, 181, 47, 19, 0, 15, 0, 0);
@@ -41,7 +41,7 @@ push();
   rotate(0.5);
   ellipse(0, 0, 24, 30);
 pop();
-// body_shading.
+// Body shading
 push();
   fill(sc);
   rect(280, 188, 130, 53, 10);
@@ -51,7 +51,7 @@ push();
   noStroke();
   rect(310, 170, 65, 30);
 pop();
-// computer_colour.
+// Computer colour
 push();
   fill(cct);
   noStroke();
@@ -60,27 +60,27 @@ push();
   noStroke();
   quad(264, 300, 265, 305, 401, 305, 401, 300);
 pop();
-// left_hand_colour.
+// Left hand colour
 rect(249, 256, 25, 9, 50, 50, 50, 0);
 rect(252, 261, 26, 23, 0, 5, 10, 5);
 rect(255, 281, 17, 9, 5);
-// right_hand_colour.
+// Right hand colour
 rect(376, 251, 25, 23, 50, 50, 5, 5);
 rect(381, 273.5, 20, 9, 0, 0, 50, 5);
-// head_colour + outline.
+// Head colour + outline
 stroke(dsc);
 strokeWeight(o);
 arc(340, 175, 90, 82, PI, PI + HALF_PI);
 arc(340, 175, 90, 82, PI + QUARTER_PI, TWO_PI);
 arc(310, 175, 30, 50, HALF_PI, PI);
 arc(375, 175, 20, 50, 0, HALF_PI);
-// face_shading/ needs to be here for the order.
+// Face shading needs to be here for the order.
 push();
   noStroke();
   fill(sc);
   ellipse(340, 166, 70, 60);
 pop();
-// mouth_colour.
+// Mouth colour
 push();
   fill(mc);
   noStroke();
@@ -89,7 +89,7 @@ push();
   arc(0, 0, 50, 59, PI + QUARTER_PI, TWO_PI, CHORD);
   arc(7, 1, 47, 58, PI + QUARTER_PI, TWO_PI, CHORD);
 pop();
-// teeth_colour.
+// Teeth colour
 noStroke();
 fill(tc);
 triangle(318, 190, 322, 186, 323, 194);
@@ -98,10 +98,10 @@ triangle(344, 180, 353, 182, 347, 189);
 triangle(360, 189, 367, 196, 354, 194);
 
 
-    // face_outlines //
+    // Face outlines //
 stroke(dsc);
 strokeWeight(o);
-// left_eye.
+// Left eye
 fill(eyew); 
 push();
   stroke(lc);
@@ -109,14 +109,14 @@ push();
   rotate(9);
   ellipse(0, 0, 43, 35);
 pop();
-// right_eye.
+// Right eye
 push(); 
   stroke(lc);
   translate(367, 154);
   rotate(7);
   ellipse(0, 0, 50, 30);
 pop();
-// left_iris.
+// Left iris
 push();
   fill(eyei);
   stroke(lc);
@@ -124,7 +124,7 @@ push();
   rotate(3.4);
   ellipse(0, 0, 8, 11);
 pop();
-// right_iris.
+// Right iris
 push();
   fill(eyei);
   stroke(lc);
@@ -132,18 +132,18 @@ push();
   rotate(3);
   ellipse(0, 0, 8, 12);
 pop();
-// eye_bags.
+// Eye bags
 noFill();
 arc(320, 163, 27, 25.8, 13, HALF_PI, PI);
 arc(378, 172, 38, 13,  HALF_PI, PI); 
-// mouth.
+// Mouth
 arc(340, 200, 52, 39, PI, PI + HALF_PI);
 push();
   translate(348, 207);
   rotate(1.2);
   arc(0, 0, 55, 42, PI, PI + HALF_PI);
 pop();
-// teeth.
+// Teeth
 stroke(lc);
 line(323, 195, 319, 191);
 line(323, 195, 323, 187.6);
@@ -155,46 +155,46 @@ line(352, 194, 360, 189);
 line(353, 194, 365, 196);
 
 
-    // left_arm_outline //
+    // Left arm outline //
 noFill();
 stroke(dsc);
 arc(294.6, 181, 50, 10, PI, PI + QUARTER_PI);
 arc(286, 198, 40, 60, PI, PI + QUARTER_PI);
-// first_finger.
+// First finger
 arc(274, 260, 50, 10, PI, PI + QUARTER_PI); 
-arc(269, 257.8, 10, 5, PI + QUARTER_PI, TWO_PI); // tip.
-arc(255, 265, 14, 20, PI, PI + QUARTER_PI); // knuckle.
+arc(269, 257.8, 10, 5, PI + QUARTER_PI, TWO_PI); // tip
+arc(255, 265, 14, 20, PI, PI + QUARTER_PI); // knuckle
 arc(249, 259, 50, 14, 0, HALF_PI, PI);
-// other_fingers.
-arc(274, 265, 9, 7, PI + QUARTER_PI, TWO_PI); // tip_t.
-arc(273, 265, 11, 33, 0, HALF_PI, PI); // tip_b.
-arc(257, 266, 10, 49, HALF_PI, PI); // knuckle.
+// Other fingers
+arc(274, 265, 9, 7, PI + QUARTER_PI, TWO_PI); // tip
+arc(273, 265, 11, 33, 0, HALF_PI, PI); // tip
+arc(257, 266, 10, 49, HALF_PI, PI); // knuckle
 arc(257, 287, 30, 7, 0, HALF_PI, PI);
-// pinkie.
-arc(270, 283, 5, 11, 0, HALF_PI, PI); // tip.
+// Pinkie
+arc(270, 283, 5, 11, 0, HALF_PI, PI); // tip
 arc(276, 284, 43, 5, PI, PI + QUARTER_PI); 
 
 
-   // right_arm_outline //
+   // Right arm outline //
 arc(402.5, 190.2, 40, 20, PI + QUARTER_PI, TWO_PI);
 arc(415, 191, 15, 105, 0, HALF_PI, PI);   
-// forearm.                     
+// Forearm                  
 arc(410, 252, 20, 20, PI + QUARTER_PI, TWO_PI); 
 arc(403, 250, 34, 40, 0, HALF_PI, PI); 
-// first_fingers.
+// First fingers
 arc(389, 261, 34, 20, PI + QUARTER_PI, TWO_PI); 
-arc(393, 263, 35, 30, PI, PI + QUARTER_PI); // tip.
-arc(401, 260, 10, 12, 0, HALF_PI, PI); // knuckle.
+arc(393, 263, 35, 30, PI, PI + QUARTER_PI); // tip
+arc(401, 260, 10, 12, 0, HALF_PI, PI); // knuckle
 arc(399, 264, 47, 5, HALF_PI, PI); 
-// other_finger.
-arc(382, 265, 13, 17, HALF_PI, PI); // tip_t.
-arc(387, 274, 13, 17, HALF_PI, PI); // tip_b.
-arc(399, 266, 7, 18, 0, HALF_PI, PI); // knuckle.
+// Other finger
+arc(382, 265, 13, 17, HALF_PI, PI); // tip
+arc(387, 274, 13, 17, HALF_PI, PI); // tip
+arc(399, 266, 7, 18, 0, HALF_PI, PI); // knuckle
 arc(400, 272.7, 41, 5, HALF_PI, PI); 
 arc(397.8, 282, 24, 3, HALF_PI, PI);
-arc(398, 275, 5, 17, 0, HALF_PI, PI); // knuckle.
+arc(398, 275, 5, 17, 0, HALF_PI, PI); // knuckle
 
-   // details //
+   // Details //
 stroke(lc);
 arc(250, 260, 30, 40, 2, PI, PI + QUARTER_PI);
 arc(240, 277, 5, 20, 0, HALF_PI, PI); 
@@ -207,15 +207,15 @@ line(350, 225, 353, 235);
 line(335, 226, 318, 248);
 line(321, 242, 307, 234);
 
-   // computer //
+   // Computer //
 line(390, 200, 250, 200);
-// left_side.
+// Left side
 line(250, 200, 257, 254.5);
 line(264, 292, 265, 300);
-// right_side.
+// Right side
 line(390, 200, 395, 249.8); 
 line(398, 286, 400, 300); 
-// bottom.
+// Bottom
 line(265, 300, 399, 300);
 line(266, 305, 399, 305);
 pop();
