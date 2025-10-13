@@ -1,20 +1,18 @@
 function setup() {
-  createCanvas(450,450);
-  background(250);
+  createCanvas(640, 480);
+  background(400);
 
 }
 
 function draw() {
-
-    // drawing tools //
 // Image / to move the emoji around the canvas.
 push();
 translate(-140, -30);
 
 // customize_key / for easy access.
-let bc = color(237, 170, 92); // body.
-let sc = color(247, 201, 146); // light_shading_colour.
-let dsc = color(74, 44, 8); //  darker_shading_colour.
+let bc = color(237, 185, 126); // body.
+let sc = color(245, 201, 152); // light_shading_colour.
+let dsc = color(110, 65, 15); //  darker_shading_colour.
 let cct = color(53, 51, 82); // computer_top.
 let ccb = color(28, 27, 46); // computer_bottom.
 let eyew = color(250, 250, 250); // eye_whites.
