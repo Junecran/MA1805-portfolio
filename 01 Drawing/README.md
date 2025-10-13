@@ -1,5 +1,5 @@
-# MA1805-portfolio **Drawing**
-
+# **Drawing**
+**MA1805-portfolio**
 The emoji represents the challenging relationship between humans and technology. Whether caused by computer crashes resulting in lost work, programming language barriers, or anxieties about AI's influence, we must navigate both the benefits and drawbacks in our tech-centered lives.
 
 My own experiences with coding capture this tension: I enjoy it, but its tedious and frustrating moments made me want to bite my laptop—a sentiment some can relate to. This feeling directly inspired the imagery of the emoji.
