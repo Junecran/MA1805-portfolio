@@ -1,26 +1,31 @@
-let x = 0;
-let y = 0;
-let lines = 0;
+const octahedron_model = `
+v 0.000000E+00 0.000000E+00 40.0000
+v 22.5000 22.5000 0.000000E+00
+v 22.5000 -22.5000 0.000000E+00
+v -22.5000 -22.5000 0.000000E+00
+v -22.5000 22.5000 0.000000E+00
+v 0.000000E+00 0.000000E+00 -40.0000
+f     1 2 3
+f     1 3 4
+f     1 4 5
+f     1 5 2
+f     6 5 4
+f     6 4 3
+f     6 3 2
+f     6 2 5
+`;
+//draw a spinning octahedron
+let octahedron;
 
 function setup() {
-  createCanvas(windowWidth,windowHeight);
+  createCanvas(100, 100, WEBGL);
+  octahedron = createModel(octahedron_model, '.obj');
+  describe('Vertically rotating 3D octahedron.');
 }
 
 function draw() {
-  //background(255, 0, 100);
-
-  let x1 = random(width)
-  let y1 = random(height);
-  let x2 = random(width);
-  let y2 = random(height);
-  let color = random();
-  stroke(color);
-  line(x1, y1, x2, y2);
-
-  let myText = "lines" +lines;
-  fill(0);
-  textSize(width/20);
-  textAlign(CENTER, CENTER);
-  text(myText, width/2, height/2);
-  lines++;
+  background(200);
+  rotateX(frameCount * 0.01);
+  rotateY(frameCount * 0.01);
+  model(octahedron);
 }
