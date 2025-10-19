@@ -4,13 +4,12 @@ function setup() {
 
 }
 
-
    // Functions and Variables //
 
 let nScale = 0.05; // Noise scale
-let ns = 8; // Noise strength 
+let ns = 10; // Noise strength 
 
-//Noise arc function
+// Noise arc function
 function noisyArc(cx, cy, w, h, startAngle, endAngle) {
   beginShape();
   for (let a = startAngle; a < endAngle; a += 0.05) {
@@ -43,5 +42,10 @@ noisyArc(405, 284, 10, 15, PI + QUARTER_PI, TWO_PI),
 noisyArc(400, 265, 50, 30, HALF_PI, PI),
 noisyArc(388, 288, 40, 70, 0, HALF_PI),
 noisyArc(420, 332, 70, 40, HALF_PI, PI);
+
+// Background trees
+noisyArc(, PI, PI + QUARTER_PI);
+
+
 }
 
