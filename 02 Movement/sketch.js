@@ -1,57 +1,47 @@
 function setup() {
-  createCanvas(600, 500);
-  noFill();
+ createCanvas(600, 500);
+ noFill();
 
 }
 
 
    // Functions and Variables //
 
-let nscale = 0.05; // Noise scale
+let nScale = 0.05; // Noise scale
 let ns = 8; // Noise strength 
 
 //Noise arc function
-function noisyArc(x1, y1, x2, y2) {
-
-
-
-
-
-}
-
-
-
-
-function draw() {
-  background(255);
-  
-  // Fornt right tree
-noiseboy(410, 80, 420, 165);
-noiseboyArc(501, 247, 200, 280, PI, PI + QUARTER_PI);
-noiseboyArc(383, 248, 35, 20, 0, HALF_PI);
-noiseboyArc(387, 263, 25, 10, PI, PI + QUARTER_PI);
-noiseboyArc(405, 284, 10, 15, PI + QUARTER_PI, TWO_PI);
-noiseboyArc(400, 265, 50, 30, HALF_PI, PI);
-noiseboyArc(388, 288, 40, 70, 0, HALF_PI);
-noiseboyArc(420, 332, 70, 40, HALF_PI, PI);
-noiseboyLine(421, 351, 492, 355);
-}
-
-// -------- Noisy Line Function --------
-function noiseboy(x1, y1, x2, y2) {
+function noisyArc(cx, cy, w, h, startAngle, endAngle) {
   beginShape();
-  let steps = 100;
-  for (let i = 0; i <= steps; i++) {
-    let t = i / steps;
-    let x = lerp(x1, x2, t);
-    let y = lerp(y1, y2, t);
+  for (let a = startAngle; a < endAngle; a += 0.05) {
+    let x = cx + cos(a) * (w / 2);
+    let y = cy + sin(a) * (h / 2);
 
-    let n = noise(x * nscale, y * nscale, frameCount * 0.01);
-    let offsetX = map(n, 0, 1, -ns, ns);
-    let offsetY = map(n, 0, 1, -ns, ns);
+    let n = noise(x * nScale, y * nScale, frameCount * 0.01);
+    let offset = map(n, 0, 1, -ns, ns);
     
-    vertex(x + offsetX, y + offsetY);
+    // Offset perpendicular to the arc direction
+    let nx = x + cos(a + HALF_PI) * offset;
+    let ny = y + sin(a + HALF_PI) * offset;
+
+    vertex(nx, ny);
   }
   endShape();
+}
+
+
+  // Trees //
+
+function draw() {
+ background(255);
+  
+// Fornt right tree
+noisyArc(501, 247, 200, 280, PI, PI + QUARTER_PI),
+noisyArc(383, 248, 35, 20, 0, HALF_PI),
+noisyArc(387, 263, 25, 10, PI, PI + QUARTER_PI),
+noisyArc(405, 284, 10, 15, PI + QUARTER_PI, TWO_PI),
+noisyArc(400, 265, 50, 30, HALF_PI, PI),
+noisyArc(388, 288, 40, 70, 0, HALF_PI),
+noisyArc(420, 332, 70, 40, HALF_PI, PI);
 }
 

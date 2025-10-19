@@ -5,11 +5,8 @@ function setup() {
 }
 
 function draw() {
-// Image / To move the emoji around the canvas.
-push();
-translate(-140, -30);
 
-// Customize Key / For easy access.
+   // Customize Key // For easy access.
 let bc = color(79, 15, 15); // Body
 let eyew = color(250, 250, 250); // Eye whites
 let eyei = color(0, 0, 0); // Eye iris
@@ -21,6 +18,10 @@ let sc = color(122, 33, 33); // Shading
 let lc = color(10, 3, 28); // Main outline 
 let dsc = color(31, 6, 6); // Second outline 
 let o = 2; // Outline weight
+
+// Image / To move the emoji around the canvas.
+push();
+translate(-140, -30);
 
 
     // Colours //
@@ -68,8 +69,8 @@ rect(255, 281, 17, 9, 5);
 rect(376, 251, 25, 23, 50, 50, 5, 5);
 rect(381, 273.5, 20, 9, 0, 0, 50, 5);
 // Head colour + outline
-stroke(dsc);
-strokeWeight(o);
+ stroke(dsc);
+ strokeWeight(o);
 arc(340, 175, 90, 82, PI, PI + HALF_PI);
 arc(340, 175, 90, 82, PI + QUARTER_PI, TWO_PI);
 arc(310, 175, 30, 50, HALF_PI, PI);
@@ -90,8 +91,8 @@ push();
   arc(7, 1, 47, 58, PI + QUARTER_PI, TWO_PI, CHORD);
 pop();
 // Teeth colour
-noStroke();
-fill(tc);
+ noStroke();
+ fill(tc);
 triangle(318, 190, 322, 186, 323, 194);
 triangle(325, 184, 334, 181, 333, 190);
 triangle(344, 180, 353, 182, 347, 189);
@@ -99,10 +100,10 @@ triangle(360, 189, 367, 196, 354, 194);
 
 
     // Face outlines //
-stroke(dsc);
-strokeWeight(o);
+ stroke(dsc);
+ strokeWeight(o);
 // Left eye
-fill(eyew); 
+ fill(eyew); 
 push();
   stroke(lc);
   translate(315, 155);
@@ -133,7 +134,7 @@ push();
   ellipse(0, 0, 8, 12);
 pop();
 // Eye bags
-noFill();
+ noFill();
 arc(320, 163, 27, 25.8, 13, HALF_PI, PI);
 arc(378, 172, 38, 13,  HALF_PI, PI); 
 // Mouth
@@ -144,7 +145,7 @@ push();
   arc(0, 0, 55, 42, PI, PI + HALF_PI);
 pop();
 // Teeth
-stroke(lc);
+ stroke(lc);
 line(323, 195, 319, 191);
 line(323, 195, 323, 187.6);
 line(333, 190, 326, 186);
@@ -156,8 +157,8 @@ line(353, 194, 365, 196);
 
 
     // Left arm outline //
-noFill();
-stroke(dsc);
+ noFill();
+ stroke(dsc);
 arc(294.6, 181, 50, 10, PI, PI + QUARTER_PI);
 arc(286, 198, 40, 60, PI, PI + QUARTER_PI);
 // First finger
@@ -195,7 +196,7 @@ arc(397.8, 282, 24, 3, HALF_PI, PI);
 arc(398, 275, 5, 17, 0, HALF_PI, PI); // knuckle
 
    // Details //
-stroke(lc);
+ stroke(lc);
 arc(250, 260, 30, 40, 2, PI, PI + QUARTER_PI);
 arc(240, 277, 5, 20, 0, HALF_PI, PI); 
 arc(253, 290, 14, 13, HALF_PI, PI); 
