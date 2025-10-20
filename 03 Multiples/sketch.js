@@ -1,5 +1,14 @@
+let img;
+function preload() {
+  img = loadImage ('Assets\lin move 2 (1).png');
+
+}
+
+
+
 function setup() {
-  createCanvas(windowHeight, windowWidth);
+  createCanvas(500, 500);
+  image(img, 0, 0);
 }
 
 
