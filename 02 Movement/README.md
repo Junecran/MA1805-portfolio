@@ -30,7 +30,7 @@
 
 The code Will **not** be finished/ able to copy
 
-# Coordinates to Lines
+### Coordinates to Lines
 
      // This is grabing the coordinates from the list[] and assinging them to managable phases.
      for (let i = 0; i < trees.length; i++)          
@@ -51,7 +51,7 @@ The code Will **not** be finished/ able to copy
 
 
 
-# Extra code comments  
+## Extra code comments  
  **mouse coordinates tool made to limit the trial and error in placing objects.** Made with using p5.js References
 
      background(250);
