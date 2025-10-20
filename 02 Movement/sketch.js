@@ -80,29 +80,7 @@ let trees = [
   214, 321, 217, 325, 238, 326, 236, 330]
 ];
 
-
-  
-function setup() {
-  createCanvas(600, 400);
-
-}
-
-function draw() {
-  background(500);
-
-for (let i = 0; i < trees.length; i++) {
-  let coords = trees[i];
-  let points = [];
-
-for (let j = 0; j < coords.length; j += 2) {
-  points.push(createVector(coords[j], coords[j + 1]));
-
-}
-  drawNoisyLine(points, i * 1000); // add seed offset
- }
-}
-
-// 🌿 Noisy line function
+  // Noisy Line Function //
 function drawNoisyLine(points, seedOffset) {
   beginShape();
   for (let i = 0; i < points.length; i++) {
@@ -113,4 +91,24 @@ function drawNoisyLine(points, seedOffset) {
   }
   endShape();
 }
+
+  
+function setup() {
+  createCanvas(600, 400);
+
+}
+
+function draw() {
+  background(500);
+
+  for (let i = 0; i < trees.length; i++) {
+    let coords = trees[i];
+    let treesPoints = [];
+  for (let j = 0; j < coords.length; j += 2) {
+   treesPoints.push(createVector(coords[j], coords[j + 1]));
+}
+  drawNoisyLine(treesPoints, i * 1000);  // Offset of the trees.
+ }
+}
+
 
