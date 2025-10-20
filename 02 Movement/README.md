@@ -20,11 +20,12 @@
 ## References Used
 
 - Used Throughout the code - https://p5js.org/reference
+
 - To help create the 'noisyVertex' and 'drawShape' fucnction - https://happycoding.io/tutorials/processing/creating-functions
+
 - information on operators - https://www.w3schools.com/jsref/jsref_operators.asp
+
 - helped me understand (...) - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
-
-
 
 
 ## Study Notes 
@@ -46,9 +47,10 @@ The code Will **not** be finished/ able to copy
      //Draws each shape with its own noise offset
      drawNoisyLine(points, i * 1000);
 
-- For each tree or bush array, we take every pair of numbers (x, y) and make them into p5.js vectors using createVector().
- - Those vectors go to drawNoisyLine().
-  - The parameter i * 1000 gives each shape its own unique noise seed offset, so they move differently instead of all in sync.
+For each tree or bush array -> take  pair of numbers (x, y) -> make them into p5.js vectors using createVector().
+----> Those vectors go to drawNoisyLine().
+
+The parameter i * 1000 gives each shape its own unique noise offset, so they move differently instead of all in sync.
 
 
 
