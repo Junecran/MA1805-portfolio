@@ -5,12 +5,15 @@ The emoji represents the challenging relationship between humans and technology.
 
 My own experiences with coding capture this tension: I enjoy it, but its tedious and frustrating moments made me want to bite my laptop — a sentiment some can relate to. This feeling directly inspired the imagery of the emoji.
 
+
+
 ## Debrief
 
-This is one of my first times coding, I am focusing on code readability and understanding the principles. A positive outcome is that I learned how helpful comments and organized code can be, as they made editing faster. I have also become more confident utlizing functions and variables. Next time, I hope to try a wider range techniques or make my code less repetitive.
+This is one of my first times coding, I am focusing on code readability and understanding the principles. This task helped me learned how helpful comments and organized code can be, as they made editing faster. I have also become more confident utlizing functions and variables. Next time, I hope to try a wider range techniques or make my code less repetitive.
 
 
-### References Used
+
+## References Used
 
  Used Throughout the code - https://p5js.org/reference
 
