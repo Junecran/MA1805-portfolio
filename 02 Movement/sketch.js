@@ -94,10 +94,9 @@ for (let i = 0; i < trees.length; i++) {
   let coords = trees[i];
   let points = [];
 
-
 for (let j = 0; j < coords.length; j += 2) {
   points.push(createVector(coords[j], coords[j + 1]));
-  
+
 }
   drawNoisyLine(points, i * 1000); // add seed offset
  }

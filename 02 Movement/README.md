@@ -42,7 +42,9 @@
      Arc(420, 332, 70, 40, HALF_PI, PI);
 
 ## Study Notes 
-*This section is my study notes. I added explanations to the code to help me remember how and why it works. I wanted to keep my notes attached to the project without making a mess of the code. Please ignore this section…. unless it will help getting a better grade.The code Will **not** be finished/ able to copy*
+*This section is my study notes. I added explanations to the code to help me remember how and why it works. I wanted to keep my notes attached to the project without making a mess of the code. Please ignore this section…. unless it will help getting a better grade.*
+
+The code Will **not** be finished/ able to copy
 
 **Coordinates to Lines**
 
@@ -57,3 +59,9 @@ turning the flat numbers into (x, y) points
      for (let j = 0; j < coords.length; j += 2)          
      points.push(createVector(coords[j], coords[j + 1]));
   
+apparently, when you have loops inside loops, it’s common to use 'j':
+- i for the outer loop (the main one),
+- j for the inner loop (the secondary one).
+
+Draws each shape with its own noise offset
+     drawNoisyLine(points, i * 1000);
