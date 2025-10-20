@@ -20,7 +20,7 @@ This is one of my first times coding, I am focusing on code readability and unde
  Used Throughout the code - https://p5js.org/reference
 
 
-## Extra code comments  
+### Extra code comments  
  **mouse coordinates tool made to limit the trial and error in placing objects.** Made with using p5.js References
 
      background(250);
