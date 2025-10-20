@@ -3,7 +3,28 @@
 
 
 
-## Extra code comments  
+
+**Design choices**
+
+
+
+
+## Debrief
+- learning array to store information helped shorten repeatable code but sometimes it was easier to write the code manally (when code coordanise where too differnet)
+
+
+
+
+
+
+## References Used
+
+- Used Throughout the code - https://p5js.org/reference
+- To help create the 'noisyVertex' and 'drawShape' fucnction - https://happycoding.io/tutorials/processing/creating-functions
+- information on operators - https://www.w3schools.com/jsref/jsref_operators.asp
+- helped me understand (...) - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+
+# Extra code comments  
  **mouse coordinates tool made to limit the trial and error in placing objects.** Made with using p5.js References
 
      background(250);
@@ -20,8 +41,16 @@
      Arc(388, 288, 40, 70, 0, HALF_PI);
      Arc(420, 332, 70, 40, HALF_PI, PI);
 
-## References Used
+## Study Notes 
+* This section is my study notes. I added explanations to the code to help me remember how and why it works. I wanted to keep my notes attached to the project without making a mess of the code. Please ignore this section…. unless it will help getting a better grade.The code Will **not** be finished/ able to copy
 
- Used Throughout the code - https://p5js.org/reference
+**Coordinates to Lines**
+This is grabing the coordinates from the list[] and assinging them to managable phases. 
+  for (let i = 0; i < trees.length; i++)          
+  let coords = trees[i];                                
+  let points = [];
 
- To help create the 'noisyVertex' and 'drawShape' fucnction - https://happycoding.io/tutorials/processing/creating-functions
+turning the flat numbers into (x, y) points
+  for (let j = 0; j < coords.length; j += 2)          
+  points.push(createVector(coords[j], coords[j + 1]));
+  
