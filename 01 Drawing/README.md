@@ -17,7 +17,8 @@ This is one of my first times coding, I am focusing on code readability and unde
 
 ## References Used
 
- Used Throughout the code - https://p5js.org/reference
+ - Used Throughout the code - https://p5js.org/reference
+
 
 
 ### Extra code comments  
