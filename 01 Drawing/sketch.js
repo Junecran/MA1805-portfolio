@@ -7,16 +7,16 @@ function setup() {
 function draw() {
 
    // Customize Key // For easy access.
-let bc = color(79, 15, 15); // Body
+let bc = color(138, 17, 23); // Body
 let eyew = color(250, 250, 250); // Eye whites
 let eyei = color(0, 0, 0); // Eye iris
 let mc = color(48, 10, 10); // Mouth
 let tc = color(250, 250, 250); // Teeth
-let cct = color(53, 51, 82); // Computer top
-let ccb = color(28, 27, 46); // Computer bottom
-let sc = color(122, 33, 33); // Shading 
-let lc = color(10, 3, 28); // Main outline 
-let dsc = color(31, 6, 6); // Second outline 
+let cct = color(31, 39, 69); // Computer top
+let ccb = color(22, 28, 48); // Computer bottom
+let sc = color(158, 19, 26); // Shading 
+let lc = color(12, 17, 33); // Main outline 
+let dsc = color(71, 6, 10); // Second outline 
 let o = 2; // Outline weight
 
 // Image / To move the emoji around the canvas.
