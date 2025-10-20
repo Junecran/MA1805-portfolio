@@ -33,22 +33,24 @@ The code Will **not** be finished/ able to copy
 # Coordinates to Lines
 
 **This is grabing the coordinates from the list[] and assinging them to managable phases.** 
+
      for (let i = 0; i < trees.length; i++)          
      let coords = trees[i];                                
      let points = [];
 
 **turning the flat numbers into (x, y) points**
+
      for (let j = 0; j < coords.length; j += 2)          
      points.push(createVector(coords[j], coords[j + 1]));
   
-**apparently, when you have loops inside loops, it’s common to use 'j':**
-- i for the outer loop (the main one),
-- j for the inner loop (the secondary one).
-
 **Draws each shape with its own noise offset**
+
      drawNoisyLine(points, i * 1000);
 
 
+**apparently, when you have loops inside loops, it’s common to use 'j':**
+- i for the outer loop (the main one),
+- j for the inner loop (the secondary one).
 
 
 
