@@ -7,7 +7,7 @@ My own experiences with coding capture this tension: I enjoy it, but its tedious
 
 **Design choices**
 - The cartoon style of the emoji made better storytelling visuals and kept the appearance light-hearted.
-- I chose blue and red as the main colors for their symbolism. Blue represents logic and intellect, while red stands for anger and passion. Red and blue are complementary and highlight the contrast between humans and computers. At the same time, blue(computers) and red(humans) work well together both metaphorically and visually.
+- I chose blue and red as the main colors for their symbolism. Blue represents logic and intellect, while red stands for anger and passion. Red and blue are complementary and highlight the contrast between humans and computers. At the same time, blue(technology) and red(humans) work well together both metaphorically and visually.
 
 
 ## Debrief
