@@ -5,7 +5,6 @@ let nScale = 0.05; // Noise smoothness
 let ns = 10; // Noise strength
 
 // Noise function 
-
 function drawLines(points) {
   stroke(0);
   for (let i = 0; i < points.length - 1; i++) {
@@ -25,6 +24,20 @@ function drawLines(points) {
     line(p1[0] + offX1, p1[1] + offY1, p2[0] + offX2, p2[1] + offY2);
   }
 }
+
+// drawing function
+function colourline(points) {
+  stroke(0);
+  fill(100, 200, 100);
+   for (let i = 0; i < points.length - 1; i++) {
+    let p1 = points[i];
+    let p2 = points[i + 1];
+   }
+}
+
+
+
+
 // Tree Data 
 let fRightTree = [
 [409, 84], [412, 105], [418, 150], [419, 170],
@@ -37,7 +50,6 @@ let fRightTree = [
 [462, 356], [483, 356]
 ];
 let fRightTree2 = [
-
 [393, 230], [390, 233], [385, 236], [380, 241],
 [378, 249], [363, 249], [329, 253], [328, 261],
 [306, 266], [302, 274], [296, 274], [290, 280],
@@ -67,6 +79,7 @@ let fLeftTree = [
 [166, 264], [173, 270], [170, 278], [169, 289], 
 [162, 306], [160, 315], [153, 336]
 ];
+
 let bTree = [
 [334, 85], [333,113], [332, 120], [334, 128],
 [336, 136], [332, 141], [320, 146], [313, 149],
@@ -122,13 +135,14 @@ line(289, 359, 181, 356);
 line(181, 356, 139, 356);
 line(139, 356, 108, 356);
 line(108, 356, 48, 359);
-// Front house chimmy
+// Front house roof
 push();
 fill(200, 200, 200);
- quad(254, 278, 262, 279, 262, 332.5, 252, 333.5);
+ quad(254, 278, 262, 279, 262, 332.5, 252, 333);
  quad(262, 279, 269, 277, 269, 294, 262, 294);
- quad(262, 301, 268, 306, 268, 330, 262, 332.5);
+ quad(262, 301, 268, 306, 268, 331.5, 262, 332.5);
 pop();
+// roof
 push();
  quad(241, 275.1, 241, 281, 189, 319, 182, 319);
  quad(241, 275.2, 253, 286, 253, 294, 241, 281);
@@ -140,7 +154,7 @@ line(292, 324, 292, 335);
 line(242, 274.6, 290, 275)
 line(182, 319, 182, 322);
 // Secondary house
-line(60, 305, 94, 304);
+line(60, 305, 89, 305);
 line(60, 305, 60, 327);
 line(60, 305, 42, 277);
 line(42, 277, 77, 278,);
@@ -148,19 +162,14 @@ line(42, 277, 77, 278,);
 rect(200, 207, 5, 33);
 rect(224, 207, 5, 33);
 line(200, 240, 200, 260);
-line(229, 240, 229, 248);
+line(229, 240, 229, 242);
 line(200, 240, 229, 240);
 line(205, 217, 224, 217);
 line(205, 215, 224, 215);
-
 rect(233, 207, 3, 30);
 line(200, 240, 225, 240);
 line(200, 248, 225, 248);
-line(218, 265, 218, 274);
-line(226, 265, 226, 279);  
-line(226, 265, 226, 278);
-line(221, 276, 210, 276);
-line(221, 275, 225, 280);
+
 // fence
 rect(178, 336, 3, 20);
 rect(140, 336, 3, 20);
@@ -176,7 +185,10 @@ drawLines(bTree2);
 drawLines(bTree3);
 drawLines(bTree4);
 drawLines(bTree5);
-drawLines(bush)
-drawLines(bush2)
+drawLines(bush);
+drawLines(bush2);
+
+colourline(fRightTree);
 }
+
 
