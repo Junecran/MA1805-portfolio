@@ -34,20 +34,7 @@ The code Will **not** be finished/ able to copy
 
 
 ### Coordinates to Lines
-For each tree or bush array -> take  pair of numbers (x, y) -> make them into p5.js vectors using createVector().
-----> Those vectors go to drawNoisyLine().
 
-     // This is grabing the coordinates from the list[] and assinging them to managable phases.
-     for (let i = 0; i < trees.length; i++)          
-     let coords = trees[i];                                
-     let points = [];
-
-     // Turning the flat numbers into (x, y) points
-     for (let j = 0; j < coords.length; j += 2)          
-     points.push(createVector(coords[j], coords[j + 1]));
-  
-     //Draws each shape with its own noise offset
-     drawNoisyLine(points, i * 1000);
 
 
 
