@@ -25,10 +25,12 @@
 - helped me understand (...) - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 
 
+
+
 ## Study Notes 
 *This section is my study notes. I added explanations to the code to help me remember how and why it works. I wanted to keep my notes attached to the project without making a mess of the code. Please ignore this section…. unless it will help getting a better grade.*
-
 The code Will **not** be finished/ able to copy
+
 
 ### Coordinates to Lines
 
@@ -44,8 +46,14 @@ The code Will **not** be finished/ able to copy
      //Draws each shape with its own noise offset
      drawNoisyLine(points, i * 1000);
 
+- For each tree or bush array, we take every pair of numbers (x, y) and make them into p5.js vectors using createVector().
+ - Those vectors go to drawNoisyLine().
+  - The parameter i * 1000 gives each shape its own unique noise seed offset, so they move differently instead of all in sync.
 
-**apparently, when you have loops inside loops, it’s common to use 'j':**
+
+
+
+**Apparently, when you have loops inside loops, it’s common to use 'j':**
 - i for the outer loop (the main one),
 - j for the inner loop (the secondary one).
 
