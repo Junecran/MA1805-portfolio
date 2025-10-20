@@ -9,7 +9,9 @@ My own experiences with coding capture this tension: I enjoy it, but its tedious
 
 ## Debrief
 
-This is one of my first times coding, I am focusing on code readability and understanding the principles. This task helped me learned how helpful comments and organized code can be, as they made editing faster. I have also become more confident utlizing functions and variables. Next time, I hope to try a wider range techniques or make my code less repetitive.
+This is one of my first times coding, I am focusing on code readability and understanding the principles.
+- This task helped me learned how helpful comments and organized code can be, as they made editing faster. I have also become more confident utlizing functions and variables. 
+- Next time, I hope to try a wider range techniques or make my code less repetitive.
 
 
 
@@ -18,7 +20,7 @@ This is one of my first times coding, I am focusing on code readability and unde
  Used Throughout the code - https://p5js.org/reference
 
 
-### Extra code comments  
+## Extra code comments  
  **mouse coordinates tool made to limit the trial and error in placing objects.** Made with using p5.js References
 
      background(250);
