@@ -35,15 +35,16 @@ The code Will **not** be finished/ able to copy
 
 ### Coordinates to Lines
 
-  function drawShape(points, colour) { 
+  function drawShape(points, colour) // 
    beginShape();
    fill(colour);
-    for (let i = 0; i < points.length; i++) {
+
+    for (let i = 0; i < points.length; i++) 
     let p = points[i];
     vertex(p[0], p[1]);
-  }
+  
    endShape(CLOSE);
-}
+
 
 
 

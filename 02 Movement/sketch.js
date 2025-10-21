@@ -180,9 +180,12 @@ rect(110, 336, 3, 20);
 rect(65, 338, 3, 20);
 
 
-// Colour //
+// Colour // 
 drawShape(forntLeftTree, 100, 100, 100);
-// Drawing data //
+
+
+
+// Drawing the data //
 drawLines(forntRightTree); 
 drawLines(forntRightTree2);
 drawLines(forntLeftTree);
