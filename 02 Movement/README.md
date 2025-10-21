@@ -35,6 +35,15 @@ The code Will **not** be finished/ able to copy
 
 ### Coordinates to Lines
 
+  function drawShape(points, colour) { 
+   beginShape();
+   fill(colour);
+    for (let i = 0; i < points.length; i++) {
+    let p = points[i];
+    vertex(p[0], p[1]);
+  }
+   endShape(CLOSE);
+}
 
 
 
@@ -45,7 +54,9 @@ Apparently, when you have loops inside loops, it’s common to use 'j':
 - i for the outer loop (the main one),
 - j for the inner loop (the secondary one).
 
-
+Square brackets [] create an array, while parentheses () do not in JavaScript.
+- []	Array literal	 Creates an array
+- ()	Grouping / function call / comma operator
 
 ## Extra code comments  
  **mouse coordinates tool made to limit the trial and error in placing objects.** Made with using p5.js References

@@ -1,14 +1,15 @@
-  // Data // 
 // Customize Key // For easy access.
 let nScale = 0.01; // Noise smoothness
 let ns = 8; // Noise strength
 
-// Noise function 
-function drawLines(points) {
+
+
+   // Noise function //
+function drawLines(wavyPoints) {
   stroke(0);
-  for (let i = 0; i < points.length - 1; i++) {
-    let p1 = points[i];
-    let p2 = points[i + 1];
+  for (let i = 0; i < wavyPoints.length - 1; i++) {
+    let p1 = wavyPoints[i];
+    let p2 = wavyPoints[i + 1];
 
     // Calculate noise offsets
     let n1 = noise(p1[0] * nScale, p1[1] * nScale, frameCount * 0.01);
@@ -23,6 +24,24 @@ function drawLines(points) {
     line(p1[0] + offX1, p1[1] + offY1, p2[0] + offX2, p2[1] + offY2);
   }
 }
+
+   // Array to Shapes Function //
+// Add 'wavey' to points to share properties of Noise function.
+function drawShape(points, colour) { 
+  beginShape();
+  fill(colour);
+  for (let i = 0; i < points.length; i++) {
+    let p = points[i];
+    vertex(p[0], p[1]);
+  }
+  endShape(CLOSE);
+}
+
+
+
+
+
+
 
 // Tree Data 
 let forntRightTree = [
@@ -41,8 +60,7 @@ let forntRightTree2 = [
 [328, 261],
 [306, 266], [302, 274], [296, 274], [290, 280],
 [286, 281], [286, 296], [288, 305], [295, 309],
-[303, 303], [312, 300], [312, 296], [318, 290],
-[325, 288], [341, 288], [342, 294], [341, 298],
+[303, 301], [304, 300], [312, 299], [317, 296], 
 [329, 307], [319, 318], [320, 322], [323, 324],
 [330, 334], [325, 344], [321, 348], [323, 355],
 [342, 359], [375, 357], [400, 358], [428, 358],
@@ -124,7 +142,6 @@ line(139, 356, 108, 356);
 line(108, 356, 48, 359);
 // Front house roof
 push();
-fill(200, 200, 200);
  quad(254, 278, 262, 279, 262, 332.5, 252, 333);
  quad(262, 279, 269, 277, 269, 294, 262, 294);
  quad(262, 301, 268, 306, 268, 331.5, 262, 332.5);
@@ -162,6 +179,9 @@ rect(140, 336, 3, 20);
 rect(110, 336, 3, 20);
 rect(65, 338, 3, 20);
 
+
+// Colour //
+drawShape(forntLeftTree, 100, 100, 100);
 // Drawing data //
 drawLines(forntRightTree); 
 drawLines(forntRightTree2);
@@ -173,6 +193,8 @@ drawLines(backgroundTrees4);
 drawLines(backgroundTrees5);
 drawLines(bush);
 drawLines(bush2);
+
+
 
 
 }
