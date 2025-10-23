@@ -5,12 +5,12 @@
 
 
 **Design choices**
-
+- sharp edges = emotions
 
 
 
 ## Debrief
-- learning array to store information helped shorten repeatable code but sometimes it was easier to write the code manally (when code coordanise where too differnet)
+- learning array to store information helped shorten repeatable code but sometimes it was easier to write the code manally (when code coordanise where too differnet) / lines didnt work /vertex were better when doing muiltple things to the same coords
 
 
 
