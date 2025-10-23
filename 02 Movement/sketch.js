@@ -151,10 +151,16 @@ push();
  quad(241, 275.2, 253, 286, 253, 294, 241, 281);
  quad(262, 294, 262, 301, 283, 323, 292, 323);
 pop();
+
+quad(254, 274, 262, 274, 262, 279, 254, 278.5);
+quad(262, 274, 269, 274, 269, 278.5, 262, 279)
 // fornt house
 
 quad(292, 323, 289, 320, 319, 319, 321, 322);
-quad()
+quad(291, 325, 320, 324.5, 320, 338, 291, 339);
+rect(293, 327, 5, 10);
+rect(313, 326.5, 5, 10);
+quad(300, 327, 311, 326.8, 311, 336.5, 300, 337);
 line(242, 274.6, 290, 275);
 line(189, 319, 189, 324);
 line(283, 323, 283, 335);
@@ -166,7 +172,10 @@ line(60, 305, 89, 305);
 line(60, 305, 60, 327);
 line(60, 305, 42, 277);
 line(42, 277, 77, 278,);
-rect(69, 306, 24, 14);
+quad(68, 307, 92, 307.5, 92, 320, 68, 319.5);
+rect(70, 308.7, 3.5, 9);
+rect(87, 309, 3.5, 9);
+quad(75.5, 308.8, 85, 309, 85, 317.5, 75.5, 317.5);
 
 // Church
 line(200, 240, 200, 260);
@@ -206,19 +215,34 @@ triangle(232.5, 207, 235, 198.5, 237, 206);
 triangle(207, 205, 210.5, 198, 211, 199);
 circle(218.2, 186 ,11);
 // fence
+rect(67, 339, 111, 4);
 rect(178, 336, 3, 20);
 rect(140, 336, 3, 20);
 rect(110, 336, 3, 20);
 rect(65, 338, 3, 20);
-//
+// details
+rect(236, 304, 9, 4);
+rect(240, 308, 9, 4);
+line(225, 304, 250, 304);
+line(230, 308, 240, 308);
 
 
 
 
 // Colour // 
-drawShape(forntLeftTree, 100, 100, 100);
-
-
+push();
+noStroke();
+//drawShape(forntRightTree, 100, 100, 100); 
+//drawShape(forntRightTree2, 100, 100 ,100);
+//drawShape(forntLeftTree, 100, 100 ,100);
+//drawShape(backgroundTrees, 100, 100 ,100); 
+//drawShape(backgroundTrees2, 100, 100 ,100);
+//drawShape(backgroundTrees3, 100, 100 ,100);
+//drawShape(backgroundTrees4, 100, 100 ,100);
+//drawShape(backgroundTrees5, 100, 100 ,100);
+//drawShape(bush, 100, 100 ,100);
+//drawShape(bush2, 100, 100 ,100);
+pop();
 
 // Drawing the data //
 drawLines(forntRightTree); 
