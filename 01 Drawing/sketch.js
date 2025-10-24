@@ -5,8 +5,7 @@ function setup() {
 }
 
 function draw() {
-
-   // Customize Key // For easy access.
+   // -- Customise Key -- // For easy access.
 let bc = color(138, 17, 23); // Body
 let eyew = color(250, 250, 250); // Eye whites
 let eyei = color(0, 0, 0); // Eye iris
@@ -19,12 +18,13 @@ let lc = color(12, 17, 33); // Main outline
 let dsc = color(71, 6, 10); // Second outline 
 let o = 2; // Outline weight
 
+
 // Image / To move the emoji around the canvas.
 push();
 translate(-140, -30);
 
 
-    // Colours //
+    // -- Colours -- //
 push(); // Computer shading here for order.
   fill(ccb);
   noStroke();
@@ -99,7 +99,7 @@ triangle(344, 180, 353, 182, 347, 189);
 triangle(360, 189, 367, 196, 354, 194);
 
 
-    // Face outlines //
+    // -- Outlines -- //
  stroke(dsc);
  strokeWeight(o);
 // Left eye
@@ -156,27 +156,27 @@ line(352, 194, 360, 189);
 line(353, 194, 365, 196);
 
 
-    // Left arm outline //
+  // Left Arm Outline //
  noFill();
  stroke(dsc);
 arc(294.6, 181, 50, 10, PI, PI + QUARTER_PI);
 arc(286, 198, 40, 60, PI, PI + QUARTER_PI);
 // First finger
 arc(274, 260, 50, 10, PI, PI + QUARTER_PI); 
-arc(269, 257.8, 10, 5, PI + QUARTER_PI, TWO_PI); // tip
-arc(255, 265, 14, 20, PI, PI + QUARTER_PI); // knuckle
+arc(269, 257.8, 10, 5, PI + QUARTER_PI, TWO_PI); // Tip
+arc(255, 265, 14, 20, PI, PI + QUARTER_PI); // Knuckles
 arc(249, 259, 50, 14, 0, HALF_PI, PI);
 // Other fingers
-arc(274, 265, 9, 7, PI + QUARTER_PI, TWO_PI); // tip
-arc(273, 265, 11, 33, 0, HALF_PI, PI); // tip
-arc(257, 266, 10, 49, HALF_PI, PI); // knuckle
+arc(274, 265, 9, 7, PI + QUARTER_PI, TWO_PI); // Tip
+arc(273, 265, 11, 33, 0, HALF_PI, PI); // Tip
+arc(257, 266, 10, 49, HALF_PI, PI); // Knuckles
 arc(257, 287, 30, 7, 0, HALF_PI, PI);
 // Pinkie
-arc(270, 283, 5, 11, 0, HALF_PI, PI); // tip
+arc(270, 283, 5, 11, 0, HALF_PI, PI); // Tip
 arc(276, 284, 43, 5, PI, PI + QUARTER_PI); 
 
 
-   // Right arm outline //
+  // Right Arm Outline //
 arc(402.5, 190.2, 40, 20, PI + QUARTER_PI, TWO_PI);
 arc(415, 191, 15, 105, 0, HALF_PI, PI);   
 // Forearm                  
@@ -184,18 +184,18 @@ arc(410, 252, 20, 20, PI + QUARTER_PI, TWO_PI);
 arc(403, 250, 34, 40, 0, HALF_PI, PI); 
 // First fingers
 arc(389, 261, 34, 20, PI + QUARTER_PI, TWO_PI); 
-arc(393, 263, 35, 30, PI, PI + QUARTER_PI); // tip
-arc(401, 260, 10, 12, 0, HALF_PI, PI); // knuckle
+arc(393, 263, 35, 30, PI, PI + QUARTER_PI); // Tip
+arc(401, 260, 10, 12, 0, HALF_PI, PI); // Knuckles
 arc(399, 264, 47, 5, HALF_PI, PI); 
 // Other finger
-arc(382, 265, 13, 17, HALF_PI, PI); // tip
-arc(387, 274, 13, 17, HALF_PI, PI); // tip
-arc(399, 266, 7, 18, 0, HALF_PI, PI); // knuckle
+arc(382, 265, 13, 17, HALF_PI, PI); // Tip
+arc(387, 274, 13, 17, HALF_PI, PI); // Tip
+arc(399, 266, 7, 18, 0, HALF_PI, PI); // Knuckles
 arc(400, 272.7, 41, 5, HALF_PI, PI); 
 arc(397.8, 282, 24, 3, HALF_PI, PI);
-arc(398, 275, 5, 17, 0, HALF_PI, PI); // knuckle
+arc(398, 275, 5, 17, 0, HALF_PI, PI); // Knuckles
 
-   // Details //
+  // Details //
  stroke(lc);
 arc(250, 260, 30, 40, 2, PI, PI + QUARTER_PI);
 arc(240, 277, 5, 20, 0, HALF_PI, PI); 
@@ -208,7 +208,7 @@ line(350, 225, 353, 235);
 line(335, 226, 318, 248);
 line(321, 242, 307, 234);
 
-   // Computer //
+  // Computer //
 line(390, 200, 250, 200);
 // Left side
 line(250, 200, 257, 254.5);

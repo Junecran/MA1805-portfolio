@@ -13,6 +13,7 @@ My own experiences with coding capture this tension: I enjoy it, but its tedious
 ## Debrief
 
 This is one of my first times coding so I focused on code readability and understanding the principles for this task.
+- Adding a ' Customise Key' allow me to test out different colour combinations easily.
 - The task helped me learned how helpful comments and organized code can be, as they made editing faster. I have also become more confident utlizing functions and variables. 
 - Next time, I hope to try a wider range techniques/ extra reading or make my code less repetitive.
 
