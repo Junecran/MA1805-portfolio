@@ -60,9 +60,10 @@ The code Will **not** be finished/ able to copy
 ### Unpacking an Array 
 
 // 'treesLines' is already an array of inside an array and needs a spread operator (...) to unpack the array
-   [
+   
+    [
     frontRightTree, frontRightTree2, backgroundTree, ...treesLines
-   ].forEach(drawLines);
+    ].forEach(drawLines);
 
 ### Noise Function
 
