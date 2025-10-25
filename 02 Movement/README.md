@@ -1,5 +1,6 @@
 # **Movement**
 **MA1805-portfolio**
+
 I set out to explore the hidden layers of grief and the lingering emptiness that follows the loss of a loved one. 
 
 When my dad passed away, our cherished nature walks became haunted by a silence that echoed with his absence. The peaceful trails we once wandered together shifted from places of comfort to landscapes tinged with sorrow. The  bright colors of nature faded into muted shades. However, as time mends hearts, those colors slowly seep back in, and some days, the emptiness feels less overwhelming.
