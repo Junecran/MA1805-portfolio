@@ -119,7 +119,7 @@ Double brackets in the 'Coordinates to Lines' because:
      text(`x: ${mouseX} y: ${mouseY}`, 50, 50);
      stroke(0); 
 
-**Differnet code for arcs instead of vertices**
+**Differnet code for arcs instead of vertices, start of a softer look to the trees**
 
      Arc(501, 247, 200, 280, PI, PI + QUARTER_PI);
      Arc(383, 248, 35, 20, 0, HALF_PI);
