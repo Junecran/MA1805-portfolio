@@ -45,15 +45,17 @@ The code Will **not** be finished/ able to copy
 ### Coordinates to Lines
 
 // points is a placeholder for the array's name.
-  function drawShape(points, colours) { 
-   beginShape();
-    noStroke();
-    fill(...colours);
+
+    function drawShape(points, colours) { 
+     beginShape();
+     noStroke();
+     fill(...colours);
 
 // For each small array [x, y] inside the main array, it draw a vertex at those coordinates.
-    points.forEach(([x, y]) => vertex(x, y));
-   endShape();
-}
+
+     points.forEach(([x, y]) => vertex(x, y));
+      endShape();
+     }
 
 ### Unpacking an Array 
 
