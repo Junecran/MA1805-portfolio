@@ -208,7 +208,7 @@ let clouds = [
 
    // -- Colours & Outlines -- //
 function setup() {
- createCanvas(415, 350);
+ createCanvas(415, 300);
 }
 
 function draw() {
@@ -330,18 +330,26 @@ push();
  rect(110, 336, 3, 20);
  rect(65, 338, 3, 20);
 pop();
+// Human
+push();
+fill(0, 0, 0);
+stroke(3);
+rect( 330, 334, 20, 30, 5);
+rect( 325, 305, 30, 30, 5);
+ellipse(340, 300, 15, 14);
+pop();
 
 
-   // -- Void -- //
+// -- Void -- //
 push();
  noStroke();
- let vx = 330;   // x position
+ let vx = 340;   // x position
  let vy = 330;  // y position 
- let p = sin(frameCount * 0.005) * 20 + 80; // pulse size
- let b = 40; // base brightness
+ let p = sin(frameCount * 0.005) * 30 + 40; // pulse size
+ let b = 30; // base brightness
 
  for (let i = 0; i < 60; i++) {
-  fill(250, 250, 250, map(i, 0, 60, b, 0));
+  fill(0, 0, 0, map(i, 0, 60, b, 0));
   ellipse(vx, vy, p + i, p * 0.6 + i * 3);
  }
 pop();

@@ -1,13 +1,14 @@
 # **Movement**
 **MA1805-portfolio**
+I set out to explore the hidden layers of grief and the lingering emptiness that follows the loss of a loved one. 
 
-
-
+When my dad passed away, our cherished nature walks became haunted by a silence that echoed with his absence. The peaceful trails we once wandered together shifted from places of comfort to landscapes tinged with sorrow. The  bright colors of nature faded into muted shades. However, as time mends hearts, those colors slowly seep back in, and some days, the emptiness feels less overwhelming.
 
 **Design choices**
-- sharp edges = emotions
-
-
+- Although it was simpler to code harsher shapes, I found that all the sharp corners added to the image's atmosphere, giving it a sense of tension and suggesting the harsh experiences of life. 
+- Keeping the colours muted conveyed a more melancholy tone. It maintained an underlying sense of hope, making the image more dynamic through the noise in the colours. 
+- A darker, pulsing void was added to the presentations of emptiness/grief. I added the pulse effect to suggest fluctuations in feelings of emptiness across different days.
+- There is a rough silhouette in the pulsing void to focus on the loss of a loved one, rather than a general feeling of emptiness. 
 
 ## Debrief
 The objective was to find a more efficient way to code or avoid repetitive code.
@@ -65,17 +66,6 @@ The code Will **not** be finished/ able to copy
     frontRightTree, frontRightTree2, backgroundTree, ...treesLines
     ].forEach(drawLines);
 
-### Noise Function
-
-    function drawLines(points) 
-     stroke(colours.outline);
-     for (let i = 0; i < points.length - 1; i++)
-      let [p1, p2] = [points[i], points[i+1]];
-      let n1 = noise(p1[0]*nScale, p1[1]*nScale, frameCount*0.01);
-      let n2 = noise(p2[0]*nScale, p2[1]*nScale, frameCount*0.01);
-      line
-       p1[0] + map(n1,0,1,-ns,ns), p1[1] + map(n1,0,1,-ns,ns),
-       p2[0] + map(n2,0,1,-ns,ns), p2[1] + map(n2,0,1,-ns,ns)
 
 ### Shape Colour Function
 
@@ -102,22 +92,6 @@ Naming a variable can avoid mutating the original data e.g:
        b += map(noise(x * 0.01 + 200, y * 0.01 + 200, frameCount * 0.01), 0, 1, -noiseFactor, noiseFactor);
      }
     fill(constrain(r, 0, 255), constrain(g, 0, 255), constrain(b, 0, 255));
-     
-
-### Cloud Function
-
-      clouds.forEach(cloud => 
-      push();
-       translate(cloud.x, cloud.y);
-       let wobble = map(noise(frameCount*0.001 + cloud.offset), 0, 1, -5, 5);
-       fill(255, 255, 255, 180);
-       noStroke();
-       ellipse(0 + wobble, 0, cloud.w*0.6, cloud.h*0.6);
-       ellipse(-cloud.w*0.2 + wobble, 0, cloud.w*0.5, cloud.h*0.5);
-       ellipse(cloud.w*0.2 + wobble, 0, cloud.w*0.5, cloud.h*0.5);
-      pop();
-      cloud.x -= 0.2;
-      if(cloud.x + cloud.w < 0) cloud.x = width + cloud.w;
 
 ### Info
 Apparently, when you have loops inside loops, it’s common to use 'j':
