@@ -106,20 +106,18 @@ Naming a variable can avoid mutating the original data e.g:
 
 ### Cloud Function
 
-   clouds.forEach(cloud => 
-    push();
-    translate(cloud.x, cloud.y);
-    let wobble = map(noise(frameCount*0.001 + cloud.offset), 0, 1, -5, 5);
-    fill(255, 255, 255, 180);
-    noStroke();
-    ellipse(0 + wobble, 0, cloud.w*0.6, cloud.h*0.6);
-    ellipse(-cloud.w*0.2 + wobble, 0, cloud.w*0.5, cloud.h*0.5);
-    ellipse(cloud.w*0.2 + wobble, 0, cloud.w*0.5, cloud.h*0.5);
-   pop();
-   cloud.x -= 0.2;
-   if(cloud.x + cloud.w < 0) cloud.x = width + cloud.w;
-
-
+      clouds.forEach(cloud => 
+      push();
+       translate(cloud.x, cloud.y);
+       let wobble = map(noise(frameCount*0.001 + cloud.offset), 0, 1, -5, 5);
+       fill(255, 255, 255, 180);
+       noStroke();
+       ellipse(0 + wobble, 0, cloud.w*0.6, cloud.h*0.6);
+       ellipse(-cloud.w*0.2 + wobble, 0, cloud.w*0.5, cloud.h*0.5);
+       ellipse(cloud.w*0.2 + wobble, 0, cloud.w*0.5, cloud.h*0.5);
+      pop();
+      cloud.x -= 0.2;
+      if(cloud.x + cloud.w < 0) cloud.x = width + cloud.w;
 
 ### Info
 Apparently, when you have loops inside loops, it’s common to use 'j':
