@@ -76,24 +76,47 @@ The code Will **not** be finished/ able to copy
 
 ### Shape Colour Function
 
-    function ShapeColour(points, baseColor, noiseFactor = 20) { 
-     beginShape();
-     noStroke();
-     let disableNoise = baseColor === colours.land;
-     points.forEach(([x, y]) => {
+     function ShapeColour(points, baseColor, noiseFactor = 20) 
+      let disableNoise = baseColor === colours.land;
+
+**Creates a bridge**
+Naming a variable can avoid mutating the original data e.g:
+// Keeps baseColor intact and only applies the noise to temporary variables r, g, b.
+// Using local copies (r, g, b) keeps your base color safe and produces predictable, smooth noise effects.
+
+     points.forEach([x, y]) => 
       let r = baseColor[0];
       let g = baseColor[1];
       let b = baseColor[2];
-       if (!disableNoise) {
+
+
+// map() is a function that remaps a number from one range to another range
+//map(value, start1, stop1, start2, stop2)
+
+     if (!disableNoise) {
        r += map(noise(x * 0.01, y * 0.01, frameCount * 0.01), 0, 1, -noiseFactor, noiseFactor);
        g += map(noise(x * 0.01 + 100, y * 0.01 + 100, frameCount * 0.01), 0, 1, -noiseFactor, noiseFactor);
        b += map(noise(x * 0.01 + 200, y * 0.01 + 200, frameCount * 0.01), 0, 1, -noiseFactor, noiseFactor);
-       }
-      fill(constrain(r, 0, 255), constrain(g, 0, 255), constrain(b, 0, 255));
-      vertex(x, y);
-      });
-     endShape();
-    }
+     }
+    fill(constrain(r, 0, 255), constrain(g, 0, 255), constrain(b, 0, 255));
+     
+
+### Cloud Function
+
+   clouds.forEach(cloud => 
+    push();
+    translate(cloud.x, cloud.y);
+    let wobble = map(noise(frameCount*0.001 + cloud.offset), 0, 1, -5, 5);
+    fill(255, 255, 255, 180);
+    noStroke();
+    ellipse(0 + wobble, 0, cloud.w*0.6, cloud.h*0.6);
+    ellipse(-cloud.w*0.2 + wobble, 0, cloud.w*0.5, cloud.h*0.5);
+    ellipse(cloud.w*0.2 + wobble, 0, cloud.w*0.5, cloud.h*0.5);
+   pop();
+   cloud.x -= 0.2;
+   if(cloud.x + cloud.w < 0) cloud.x = width + cloud.w;
+
+
 
 ### Info
 Apparently, when you have loops inside loops, it’s common to use 'j':

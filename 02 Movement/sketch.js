@@ -47,23 +47,25 @@ for (let i = 0; i < waveyPoints.length - 1; i++) {
 }
 }
   // Colour Shape Function //                                                                                                                                                                                                                                                       
-function ShapeColour(points, baseColor, noiseFactor = 20) { 
-beginShape();
-noStroke(); 
-let disableNoise = baseColor === colours.land;
-points.forEach(([x, y]) => {
- let r = baseColor[0];
- let g = baseColor[1];
- let b = baseColor[2];
-  if (!disableNoise) {
-   r += map(noise(x * 0.01, y * 0.01, frameCount * 0.01), 0, 1, -noiseFactor, noiseFactor);
-   g += map(noise(x * 0.01 + 100, y * 0.01 + 100, frameCount * 0.01), 0, 1, -noiseFactor, noiseFactor);
-   b += map(noise(x * 0.01 + 200, y * 0.01 + 200, frameCount * 0.01), 0, 1, -noiseFactor, noiseFactor);
-  }
- fill(constrain(r, 0, 255), constrain(g, 0, 255), constrain(b, 0, 255));
- vertex(x, y);
-});
- endShape();
+function ShapeColour(points, baseColor, noiseFactor = 20) {
+  beginShape();
+  noStroke();
+  let disableNoise = baseColor === colours.land;
+  points.forEach(([x, y]) => {
+    let r = baseColor[0];
+    let g = baseColor[1];
+    let b = baseColor[2];
+
+    if (!disableNoise) {
+      r += map(noise(x * 0.01, y * 0.01, frameCount * 0.01), 0, 1, -noiseFactor, noiseFactor);
+      g += map(noise(x * 0.01 + 100, y * 0.01 + 100, frameCount * 0.01), 0, 1, -noiseFactor, noiseFactor);
+      b += map(noise(x * 0.01 + 200, y * 0.01 + 200, frameCount * 0.01), 0, 1, -noiseFactor, noiseFactor);
+    }
+    fill(constrain(r, 0, 255), constrain(g, 0, 255), constrain(b, 0, 255));
+    vertex(x, y);
+  });
+
+  endShape();
 }
   // Drawing Data //
 let frontRightTree = [
@@ -198,7 +200,7 @@ const objects = { // Order is important here.
  frontLeftTree, bush2, land 
 };
 let clouds = [
-  {x: 110, y: 140, w: 120, h: 40, offset: 100}, // +60 x, +90 y
+  {x: 110, y: 140, w: 120, h: 40, offset: 100}, 
   {x: 260, y: 160, w: 150, h: 50, offset: 300},
   {x: 410, y: 130, w: 100, h: 30, offset: 500}
 ];
@@ -212,11 +214,12 @@ function setup() {
 function draw() {
  background(sky);
  stroke(1);
-// Image / To move image around the canvas.
- push();
-  translate(-60, -90);
+
+  // Image //
+  translate(-60, -90);// Add push() and pop() if needed.
   ShapeColour(sky, colours.sky); // Here for order.
-  // Clouds //
+
+// Clouds 
   clouds.forEach(cloud => {
    push();
     translate(cloud.x, cloud.y);
@@ -230,12 +233,14 @@ function draw() {
  cloud.x -= 0.2;
  if(cloud.x + cloud.w < 0) cloud.x = width + cloud.w;
  });
-  // Drawing Shapes Command //
+
+// Drawing Shapes Command
  push();
   for (let shape in objects) {
    ShapeColour(objects[shape], colours[shape], 18);
   }
  pop();
+
   // Outlines //
 // Front house 
 stroke(1);
@@ -340,6 +345,6 @@ push();
   ellipse(vx, vy, p + i, p * 0.6 + i * 3);
  }
 pop();
-pop();
+
 }
 
