@@ -1,64 +1,70 @@
 
-
- // Customise Key // For easy access.
-
-// Settings 
-let nScale = 0.01; // Noise smoothness
-let ns = 8; // Noise strength
-
-// Colours 
+  // -- Customise Key -- //
 let colours = {
- churchMain: [230, 220, 190],
- churchSecond: [210, 200, 170],
- churchRoof: [180, 100, 70],
- backgroundTree: [70, 100, 60],
- backgroundTree2: [65, 95, 55],
- backgroundTree3: [60, 90, 50],
- backgroundTree4: [55, 85, 45],
- backgroundTree5: [50, 80, 40],
- frontHouse: [200, 180, 160],
- frontHouseRoof: [150, 100, 80],
- frontRightTree: [70, 120, 60],
- frontRightTree2: [75, 130, 65],
- frontLeftTree: [80, 140, 70],
- bush: [60, 100, 55],
- bush2: [65, 110, 60],
- land: [150, 120, 90],
- fence: [100, 100 ,100],
- chimmy: [100, 100, 100],
- roof: [100, 100, 100],
- bricks: [100, 100, 100],
+ sky: [155, 182, 196],
+ churchMain: [122, 108, 97],
+ churchSecond: [138, 119, 103],
+ churchRoof: [46, 31, 26],
+ churchWindow: [219, 176, 129],
+ churchParts: [122, 104, 89],
+ backgroundTree: [108, 128, 80],
+ backgroundTree2: [173, 186, 155],
+ backgroundTree3: [135, 153, 110],
+ backgroundTree4: [125, 145, 97],
+ backgroundTree5: [125, 145, 97],
+ frontHouse: [133, 92, 66],
+ frontHouseRoof: [43, 36, 35],
+ chimmy: [117, 64, 43],
+ roof: [33, 28, 27],
+ bricks: [117, 64, 43],
+ window: [219, 176, 129],
+ windowFrame: [33, 20, 14],
+ frontRightTree: [69, 92, 36],
+ frontRightTree2: [80, 105, 46],
+ frontLeftTree: [69, 92, 36],
+ bush: [76, 99, 41],
+ bush2: [76, 99, 41],
+ land: [69, 59, 50],
+ fence: [54, 40, 33],
+ treesOutline: [29, 36, 29],
 };
 
 
    // -- Data and Functions -- //
   // Noise Line Function //
-function drawLines(wavyPoints) {
- stroke(1);
- for (let i = 0; i < wavyPoints.length - 1; i++) {
-  let p1 = wavyPoints[i];
-  let p2 = wavyPoints[i + 1];
-
-  let n1 = noise(p1[0] * nScale, p1[1] * nScale, frameCount * 0.01);
-  let n2 = noise(p2[0] * nScale, p2[1] * nScale, frameCount * 0.01);
-  let offX1 = map(n1, 0, 1, -ns, ns);
-  let offY1 = map(n1, 0, 1, -ns, ns);
-  let offX2 = map(n2, 0, 1, -ns, ns);
-  let offY2 = map(n2, 0, 1, -ns, ns);
-
-  line(p1[0] + offX1, p1[1] + offY1, p2[0] + offX2, p2[1] + offY2);
+let nScale = 0.01; // Noise smoothness
+let ns = 8; // Noise strength
+function drawLines(waveyPoints) {
+stroke(colours.treesOutline);
+for (let i = 0; i < waveyPoints.length - 1; i++) {
+ let [p1, p2] = [waveyPoints[i], waveyPoints[i+1]];
+ let n1 = noise(p1[0]*nScale, p1[1]*nScale, frameCount*0.01);
+ let n2 = noise(p2[0]*nScale, p2[1]*nScale, frameCount*0.01);
+ line(
+  p1[0] + map(n1,0,1,-ns,ns), p1[1] + map(n1,0,1,-ns,ns),
+  p2[0] + map(n2,0,1,-ns,ns), p2[1] + map(n2,0,1,-ns,ns)
+  );
+}
+}
+  // Colour Shape Function //                                                                                                                                                                                                                                                       
+function ShapeColour(points, baseColor, noiseFactor = 20) { 
+beginShape();
+noStroke(); 
+let disableNoise = baseColor === colours.land;
+points.forEach(([x, y]) => {
+ let r = baseColor[0];
+ let g = baseColor[1];
+ let b = baseColor[2];
+  if (!disableNoise) {
+   r += map(noise(x * 0.01, y * 0.01, frameCount * 0.01), 0, 1, -noiseFactor, noiseFactor);
+   g += map(noise(x * 0.01 + 100, y * 0.01 + 100, frameCount * 0.01), 0, 1, -noiseFactor, noiseFactor);
+   b += map(noise(x * 0.01 + 200, y * 0.01 + 200, frameCount * 0.01), 0, 1, -noiseFactor, noiseFactor);
   }
+ fill(constrain(r, 0, 255), constrain(g, 0, 255), constrain(b, 0, 255));
+ vertex(x, y);
+});
+ endShape();
 }
-
-  // Colour Shapes Function // 
-function ShapeColour(points, colours) { 
-  beginShape();
-   noStroke();
-   fill(...colours);
-   points.forEach(([x, y]) => vertex(x, y));
-  endShape();
-}
-
   // Drawing Data //
 let frontRightTree = [
  [409, 84], [412, 105], [418, 150], [419, 170],
@@ -179,37 +185,60 @@ let treesLines = [
 let land = [
  [478, 364], [324, 364], [289, 359], [181, 356],
  [139, 356], [108, 356], [48, 359], [37, 358],
- [36, 405], [479, 422], [478, 364]
+ [0, 500], [500, 500]
+];
+let sky = [
+ [0, 0], [0, 600], [600, 600], [600, 0]
 ];
 const objects = { // Order is important here.
  churchMain, churchSecond, churchRoof,
  backgroundTree2, backgroundTree3, backgroundTree4,
  backgroundTree5, backgroundTree, frontHouse,
  frontHouseRoof, frontRightTree2, frontRightTree,
- frontLeftTree, bush2, land
+ frontLeftTree, bush2, land 
 };
+let clouds = [
+  {x: 110, y: 140, w: 120, h: 40, offset: 100}, // +60 x, +90 y
+  {x: 260, y: 160, w: 150, h: 50, offset: 300},
+  {x: 410, y: 130, w: 100, h: 30, offset: 500}
+];
 
 
    // -- Colours & Outlines -- //
 function setup() {
- createCanvas(600, 600);
+ createCanvas(415, 350);
 }
 
 function draw() {
- background(100);
- text(`x: ${mouseX} y: ${mouseY}`, 100, 100);
+ background(sky);
  stroke(1);
-
-  // Colouring Shapes Command //
-  push();
-   for (let shape in objects) {
-    ShapeColour(objects[shape], colours[shape]);
+// Image / To move image around the canvas.
+ push();
+  translate(-60, -90);
+  ShapeColour(sky, colours.sky); // Here for order.
+  // Clouds //
+  clouds.forEach(cloud => {
+   push();
+    translate(cloud.x, cloud.y);
+    let wobble = map(noise(frameCount*0.001 + cloud.offset), 0, 1, -5, 5);
+    fill(255, 255, 255, 180);
+    noStroke();
+    ellipse(0 + wobble, 0, cloud.w*0.6, cloud.h*0.6);
+    ellipse(-cloud.w*0.2 + wobble, 0, cloud.w*0.5, cloud.h*0.5);
+    ellipse(cloud.w*0.2 + wobble, 0, cloud.w*0.5, cloud.h*0.5);
+ pop();
+ cloud.x -= 0.2;
+ if(cloud.x + cloud.w < 0) cloud.x = width + cloud.w;
+ });
+  // Drawing Shapes Command //
+ push();
+  for (let shape in objects) {
+   ShapeColour(objects[shape], colours[shape], 10);
   }
-  pop();
-
-
+ pop();
   // Outlines //
 // Front house 
+stroke(1);
 line(242, 274.6, 290, 275);
 line(189, 319, 189, 324);
 line(283, 323, 283, 335);
@@ -219,48 +248,43 @@ fill(colours.chimmy)
 quad(254, 278, 262, 279, 262, 332.5, 252, 333);
 quad(262, 279, 269, 277, 269, 294, 262, 294);
 quad(262, 301, 268, 306, 268, 331.5, 262, 332.5);
+quad(292, 323, 289, 320, 319, 319, 321, 322);
+quad(254, 274, 262, 274, 262, 279, 254, 278.5);
+quad(262, 274, 269, 274, 269, 278.5, 262, 279);
 pop();
 // Roof details
 push();
-fill(colours.roof)
+fill(colours.roof);
 quad(241, 275.1, 241, 281, 189, 319, 182, 319);
 quad(241, 275.2, 253, 286, 253, 294, 241, 281);
 quad(262, 294, 262, 301, 283, 323, 292, 323);
-quad(254, 274, 262, 274, 262, 279, 254, 278.5);
-quad(262, 274, 269, 274, 269, 278.5, 262, 279);
 quad(292, 323, 289, 320, 319, 319, 321, 322);
 pop();
 // Bricks
 push();
-fill(colours.bricks)
-rect(236, 304, 9, 4);
-rect(240, 308, 9, 4);
-rect(232, 300, 9, 4);
-rect(220, 308, 9, 4);
-rect(236, 318, 9, 4);
-line(225, 304, 250, 304); // Brick details here for order. 
-line(230, 308, 240, 308); 
+ fill(colours.bricks);
+ rect(236, 304, 9, 4);
+ rect(240, 308, 9, 4);
+ rect(232, 300, 9, 4);
+ rect(220, 308, 9, 4);
+ rect(236, 318, 9, 4);
+ line(225, 304, 250, 304); // Brick details here for order. 
+ line(230, 308, 240, 308); 
 pop();
 // Windows
+push();
+fill(colours.windowFrame);
 quad(291, 325, 320, 324.5, 320, 338, 291, 339);
+fill(colours.window);
 quad(300, 327, 311, 326.8, 311, 336.5, 300, 337);
 rect(293, 327, 5, 10);
 rect(313, 326.5, 5, 10);
-
+pop();
+// Front bush
 push();
  ShapeColour(bush, colours.bush); // Here for order.
+  ShapeColour(land, colours.land);
 pop();
-
-// Secondary house
-line(60, 305, 89, 305);
-line(60, 305, 60, 327);
-line(60, 305, 42, 277);
-line(42, 277, 77, 278,);
-quad(68, 307, 92, 307.5, 92, 320, 68, 319.5);
-quad(75.5, 308.8, 85, 309, 85, 317.5, 75.5, 317.5);
-rect(70, 308.7, 3.5, 9);
-rect(87, 309, 3.5, 9);
-
 // Church
 let churchLines = [
   [200,240,200,260],[200,240,229,240],[205,217,224,217],[205,215,224,215],
@@ -272,20 +296,26 @@ let churchLines = [
   [200,256,220,256],[211,224,211,239],[218,225,218,239]
 ];
 churchLines.forEach(l => line(...l));
-arc(214, 226, 8, 10, PI + QUARTER_PI, TWO_PI);
-quad(233, 206, 236.5, 205, 236, 233, 233, 236);
-rect(200, 207, 5, 33);
-rect(224, 207, 5, 33);
-triangle(199, 207, 202.5, 198, 206, 207 );
-triangle(223, 207, 226.5, 198, 230, 207);
-triangle(232.5, 207, 235, 198.5, 237, 206);
-triangle(207, 205, 210.5, 198, 211, 199);
-circle(218.2, 186 ,11);
-
+// Church details
+push();
+ fill(colours.churchWindow)
+ arc(214.5, 227, 7, 13, PI + QUARTER_PI, TWO_PI);
+ noStroke();
+ rect(211.5, 224, 6, 15.4);
+pop();
+push();
+ fill(colours.churchParts)
+ quad(233, 206, 236.5, 205, 236, 233, 233, 236);
+ rect(200, 207, 5, 33);
+ rect(224, 207, 5, 33);
+ triangle(199, 207, 202.5, 198, 206, 207 );
+ triangle(223, 207, 226.5, 198, 230, 207);
+ triangle(232.5, 207, 235, 198.5, 237, 206);
+ triangle(207, 205, 210.5, 198, 211, 199);
+ circle(218.2, 186 ,11);
+pop();
 // Noisy Outlines
-[ frontRightTree, backgroundTree, ...treesLines 
-].forEach(drawLines);
-
+[ frontRightTree, backgroundTree, ...treesLines ].forEach(drawLines);
 // Fence // Here for order.
 push();
  fill(colours.fence);
@@ -296,4 +326,20 @@ push();
  rect(65, 338, 3, 20);
 pop();
 
+
+   // -- Void -- //
+push();
+ noStroke();
+ let x = 330;   // x position
+ let y = 330;  // y position 
+ let p = sin(frameCount * 0.005) * 20 + 80; // pulse size
+ let b = 40; // base brightness
+
+ for (let i = 0; i < 60; i++) {
+  fill(250, 250, 250, map(i, 0, 60, b, 0));
+  ellipse(x, y, p + i, p * 0.6 + i * 3);
+ }
+pop();
+
 }
+

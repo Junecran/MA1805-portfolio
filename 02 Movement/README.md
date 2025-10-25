@@ -10,18 +10,18 @@
 
 
 ## Debrief
-- learning array to store information helped shorten repeatable code but sometimes it was easier to write the code manally (when code coordanise where too differnet) / lines didnt work /vertex were better when doing muiltple things to the same coords
-- arrays list only worked when the line while contiusous and needed muiltple placement/ action (shapes without junktions )
+The objective was to find a more efficient way to code or avoid repetitive code.
 
-- wanted to keep a consitent way of drawing my shapes but it seemed easier to keep non- lines object the way there where
+- Using an array to store coordinates reduces repetitive code, such as line-drawing. However, figuring out how to unpack the array proved a bit challenging because it required creating new functions.  
 
-- like a way to combine the line and (mulitple different types )shape data into one 
+- I couldn't figure out how to simplify shape coordinates (rects, quads, circles, etc.) without creating a new set of arrays, so I decided to do them manually. I would like to work on this next time or find a way to combine multiple data types into a single array. Maybe an ‘if’ statement might be the way to do this.
 
-- loneger name = less comments , but to keep the lines short i use breathations
+- I usually sketch out my plan on paper, but I don't think about the placement of computerised shapes and lines. This could be important to consider next time I am planning.  
 
-- find way to short code but still keep shapes differnet
-- maybe plans lines before coding 
-- Work on if statment e.g. combining For/Foreach statement into one
+- I found that if I avoid using short names for code, I limit the amount of comments —the downside is that it takes longer to write, and I kept messing up the names.
+
+- I need to learn more about the push() and pop(), which could fix the ‘Here for order’ issue I have in my code.
+
 
 ## References Used
 
@@ -41,7 +41,6 @@
 ## Study Notes 
 *This section is my study notes. I added explanations to the code to help me remember how and why it works. I wanted to keep my notes attached to the project without making a mess of the code. Please ignore this section…. unless it will help getting a better grade.*
 The code Will **not** be finished/ able to copy
-
 
 ### Coordinates to Lines
 
@@ -63,9 +62,38 @@ The code Will **not** be finished/ able to copy
     frontRightTree, frontRightTree2, backgroundTree, ...treesLines
    ].forEach(drawLines);
 
+### Noise Function
 
+    function drawLines(points) 
+     stroke(colours.outline);
+     for (let i = 0; i < points.length - 1; i++)
+      let [p1, p2] = [points[i], points[i+1]];
+      let n1 = noise(p1[0]*nScale, p1[1]*nScale, frameCount*0.01);
+      let n2 = noise(p2[0]*nScale, p2[1]*nScale, frameCount*0.01);
+      line
+       p1[0] + map(n1,0,1,-ns,ns), p1[1] + map(n1,0,1,-ns,ns),
+       p2[0] + map(n2,0,1,-ns,ns), p2[1] + map(n2,0,1,-ns,ns)
 
+### Shape Colour Function
 
+    function ShapeColour(points, baseColor, noiseFactor = 20) { 
+     beginShape();
+     noStroke();
+     let disableNoise = baseColor === colours.land;
+     points.forEach(([x, y]) => {
+      let r = baseColor[0];
+      let g = baseColor[1];
+      let b = baseColor[2];
+       if (!disableNoise) {
+       r += map(noise(x * 0.01, y * 0.01, frameCount * 0.01), 0, 1, -noiseFactor, noiseFactor);
+       g += map(noise(x * 0.01 + 100, y * 0.01 + 100, frameCount * 0.01), 0, 1, -noiseFactor, noiseFactor);
+       b += map(noise(x * 0.01 + 200, y * 0.01 + 200, frameCount * 0.01), 0, 1, -noiseFactor, noiseFactor);
+       }
+      fill(constrain(r, 0, 255), constrain(g, 0, 255), constrain(b, 0, 255));
+      vertex(x, y);
+      });
+     endShape();
+    }
 
 ### Info
 Apparently, when you have loops inside loops, it’s common to use 'j':
