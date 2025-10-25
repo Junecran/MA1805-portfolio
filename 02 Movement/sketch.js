@@ -233,7 +233,7 @@ function draw() {
   // Drawing Shapes Command //
  push();
   for (let shape in objects) {
-   ShapeColour(objects[shape], colours[shape], 10);
+   ShapeColour(objects[shape], colours[shape], 18);
   }
  pop();
   // Outlines //
@@ -330,16 +330,16 @@ pop();
    // -- Void -- //
 push();
  noStroke();
- let x = 330;   // x position
- let y = 330;  // y position 
+ let vx = 330;   // x position
+ let vy = 330;  // y position 
  let p = sin(frameCount * 0.005) * 20 + 80; // pulse size
  let b = 40; // base brightness
 
  for (let i = 0; i < 60; i++) {
   fill(250, 250, 250, map(i, 0, 60, b, 0));
-  ellipse(x, y, p + i, p * 0.6 + i * 3);
+  ellipse(vx, vy, p + i, p * 0.6 + i * 3);
  }
 pop();
-
+pop();
 }
 
