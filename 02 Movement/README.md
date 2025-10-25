@@ -154,23 +154,4 @@ Double brackets in the 'Coordinates to Lines' because:
      Arc(388, 288, 40, 70, 0, HALF_PI);
      Arc(420, 332, 70, 40, HALF_PI, PI);
 
-**Adding 'wavey' to 'points' shares properties of Noise function.**
 
-     function drawShape(points, colour) { 
-      beginShape();
-      noStroke();
-      fill(colour);
-        for (let i = 0; i < points.length; i++) {
-        let p = points[i];
-        vertex(p[0], p[1]);
-      }
-      endShape();
-     }
-
-
-**Personal Coding Style:**
-Headings - 3 spaces + // -- on both sides + title capitalization
-Subheadings/ list name - 2 space + // on both sides + title capitalization
-subsections - no spaces + single // + first word capitalize
-comments - no spaces + single // + first word capitalize + full stop.
-**2 spaces to break up each Heading**
