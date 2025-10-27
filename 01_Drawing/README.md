@@ -5,7 +5,7 @@ The emoji represents the challenging relationship between humans and technology.
 My own experiences with coding capture this tension: I enjoy it, but its tedious and frustrating moments made me want to bite my laptop — a sentiment some can relate to. This feeling directly inspired the imagery of the emoji.
 
 
-**Design choices**
+## **Design choices**
 
 - The cartoon style of the emoji made better storytelling visuals and kept the appearance light-hearted.
 
@@ -13,7 +13,6 @@ My own experiences with coding capture this tension: I enjoy it, but its tedious
 
 
 ## Debrief
-
 This is one of my first times coding so I focused on code readability and understanding the principles for this task.
 
 - Adding a ' Customise Key' allow me to test out different colour combinations easily.
