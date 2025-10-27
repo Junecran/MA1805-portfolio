@@ -1,10 +1,11 @@
 ### Index 
+Eleanor Craner
 **Main link to Github**
-https://github.com/Junecran/MA1805-portfolio/tree/main
+https://github.com/Junecran/MA1805-portfolio.git
 
 ## 01 Drawing
-- readme.md 
-- live sever
+- readme.md s
+- 
 
 ## 02 Movement
 - readme
