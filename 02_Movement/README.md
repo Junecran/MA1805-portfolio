@@ -77,8 +77,9 @@ This section is my study notes. I added explanations to the code to help me reme
      function ShapeColour(points, baseColor, noiseFactor = 20) 
       let disableNoise = baseColor === colours.land;
 
-**Creates a bridge**
+### Creates a bridge
 Naming a variable can avoid mutating the original data e.g:
+
 // Keeps baseColor intact and only applies the noise to temporary variables r, g, b.
 // Using local copies (r, g, b) keeps your base color safe and produces predictable, smooth noise effects.
 
@@ -103,11 +104,11 @@ Apparently, when you have loops inside loops, it’s common to use 'j':
 - i for the outer loop (the main one),
 - j for the inner loop (the secondary one).
 
-Square brackets [] create an array, while parentheses () do not in JavaScript.
+**Square brackets [] create an array, while parentheses () do not in JavaScript.**
 - []	Array literal	 - Creates an array
 - ()	Grouping / function call / comma operator
 
-Double brackets in the 'Coordinates to Lines' because:
+**Double brackets in the 'Coordinates to Lines' because:**
 - [ and ] destructure each [x, y] array,
 - ( and ) wrap the arrow function parameter.
 
