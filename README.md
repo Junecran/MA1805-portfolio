@@ -1,8 +1,7 @@
 ### Index 
-Eleanor Craner
-
+**Eleanor Craner**
 **Main link to Github** - 
-[Link Text](https://github.com/Junecran/MA1805-portfolio.git)
+[https://github.com/Junecran/MA1805-portfolio.git](https://github.com/Junecran/MA1805-portfolio.git)
 
 ## 01 Drawing
 - readme.md s
