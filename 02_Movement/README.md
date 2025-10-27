@@ -45,8 +45,8 @@ The objective was to find a more efficient way to code or avoid repetitive code.
 
 
 ## Study Notes 
-*This section is my study notes. I added explanations to the code to help me remember how and why it works. I wanted to keep my notes attached to the project without making a mess of the code. Please ignore this section…. unless it will help getting a better grade.*
-The code Will **not** be finished/ able to copy.
+This section is my study notes. I added explanations to the code to help me remember how and why it works. Please ignore this section…. unless it will help getting a better grade.
+
 
 ### Coordinates to Lines
 
@@ -116,21 +116,5 @@ Double brackets in the 'Coordinates to Lines' because:
 - for = 'points' control / better for animated code  e.g.'for (let i = 0; i < points.length - 1; i++)'
 
 
-## Extra code comments  
- **mouse coordinates tool made to limit the trial and error in placing objects.** Made with using p5.js References
-
-     background(250);
-     text(`x: ${mouseX} y: ${mouseY}`, 50, 50);
-     stroke(0); 
-
-**Differnet code for arcs instead of vertices, start of a softer look to the trees**
-
-     Arc(501, 247, 200, 280, PI, PI + QUARTER_PI);
-     Arc(383, 248, 35, 20, 0, HALF_PI);
-     Arc(387, 263, 25, 10, PI, PI + QUARTER_PI);
-     Arc(405, 284, 10, 15, PI + QUARTER_PI, TWO_PI);
-     Arc(400, 265, 50, 30, HALF_PI, PI);
-     Arc(388, 288, 40, 70, 0, HALF_PI);
-     Arc(420, 332, 70, 40, HALF_PI, PI);
 
 
