@@ -1,7 +1,6 @@
 **Eleanor Craner**
 
-Main link to Github- 
-[https://github.com/Junecran/MA1805-portfolio.git](https://github.com/Junecran/MA1805-portfolio.git)
+[https://junecran.github.io/MA1805-Portfolio/](https://junecran.github.io/MA1805-Portfolio/)
 
 
 
