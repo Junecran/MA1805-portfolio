@@ -42,7 +42,7 @@ The objective was to find a more efficient way to code or avoid repetitive code.
 
 ## Study Notes 
 *This section is my study notes. I added explanations to the code to help me remember how and why it works. I wanted to keep my notes attached to the project without making a mess of the code. Please ignore this section…. unless it will help getting a better grade.*
-The code Will **not** be finished/ able to copy
+The code Will **not** be finished/ able to copy.
 
 ### Coordinates to Lines
 
