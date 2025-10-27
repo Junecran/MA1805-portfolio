@@ -28,10 +28,10 @@ This is one of my first times coding so I focused on code readability and unders
 
  - Used Throughout the code - https://p5js.org/reference
 
-- Mouse coordinates tool  
+Mouse coordinates tool  
 
-     background(250);
-     text(`x: ${mouseX} y: ${mouseY}`, 50, 50);
-     stroke(0); 
+      background(250);
+      text(`x: ${mouseX} y: ${mouseY}`, 50, 50);
+      stroke(0); 
 
 
