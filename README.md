@@ -1,26 +1,35 @@
-**Eleanor Craner**
+**By Eleanor Craner**
 
 **Main link to Github** - 
 [https://github.com/Junecran/MA1805-portfolio.git](https://github.com/Junecran/MA1805-portfolio.git)
 
 
-
+## Projects Index
 # 01 Drawing
 [Drawing](01_Drawing/index.html)
 
-[Drawing ReadMe](01_Drawing/README.md)
+[ReadMe](01_Drawing/README.md)
+
+[Code](01_Drawing/sketch.js)
 
 # 02 Movement
 [Movement](02_Movement/index.html)
 
-[Movement ReadMe](02_Movement/README.md)
+[ReadMe](02_Movement/README.md)
+
+[Code](02_Movement/sketch.js
+)
 
 # 03 multiples
 [Multiples](03_Multiples/index.html)
 
-[Multiples ReadMe](03_Multiples/README.md)
+[ReadMe](03_Multiples/README.md)
+
+[Code](03_Multiples/sketch.js)
 
 # 04 Media 
 [Media](04_Media/index.html)
 
-[Media ReadMe](04_Media/README.md)
+[ReadMe](04_Media/README.md)
+
+[Code](04_Media/sketch.js)
