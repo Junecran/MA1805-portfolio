@@ -4,7 +4,7 @@ I set out to explore the hidden layers of grief and the lingering emptiness that
 When my dad passed away, our cherished nature walks became haunted by a silence that echoed with his absence. The peaceful trails we once wandered together shifted from places of comfort to landscapes tinged with sorrow. The  bright colors of nature faded into muted shades. However, as time mends hearts, those colors slowly seep back in, and some days, the emptiness feels less overwhelming.
 
 
-## Design choices
+## Design Choices
 
 - Although it was simpler to code harsher shapes, I found that all the sharp corners added to the image's atmosphere, giving it a sense of tension and suggesting the harsh experiences of life. 
 
@@ -31,9 +31,9 @@ The objective was to find a more efficient way to code or avoid repetitive code.
 
 ## References Used
 
-- Used Throughout the code - https://p5js.org/reference
+- Used Throughout the code - [https://p5js.org/reference](https://p5js.org/reference)
 
-- To help create the 'drawLines' and 'drawShape' fucnction - https://happycoding.io/tutorials/processing/creating-functions
+- To help create the 'drawLines' and 'drawShape' fucnction - [https://happycoding.io/tutorials/processing/creating-functions](https://happycoding.io/tutorials/processing/creating-functions)
 
 - Information on operators - https://www.w3schools.com/jsref/jsref_operators.asp
 
