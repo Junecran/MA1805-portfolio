@@ -26,7 +26,8 @@ This is one of my first times coding so I focused on code readability and unders
 
 ## References Used
 
-Mouse coordinates tool - https://p5js.org/reference
+ - Used Throughout the code and use for the mouse coordinate tool to limit the trial and error in placing objects - https://p5js.org/reference
+ 
 
       background(250);
       text(`x: ${mouseX} y: ${mouseY}`, 50, 50);
