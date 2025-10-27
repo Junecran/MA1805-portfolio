@@ -31,17 +31,17 @@ The objective was to find a more efficient way to code or avoid repetitive code.
 
 ## References Used
 
-- Used Throughout the code - [https://p5js.org/reference](https://p5js.org/reference)
+- Used Throughout the code - https://p5js.org/reference
 
-- To help create the 'drawLines' and 'drawShape' fucnction - [https://happycoding.io/tutorials/processing/creating-functions](https://happycoding.io/tutorials/processing/creating-functions)
+- To help create the 'drawLines' and 'drawShape' fucnction - https://happycoding.io/tutorials/processing/creating-functions
 
-- Information on operators - [https://www.w3schools.com/jsref/jsref_operators.asp](https://www.w3schools.com/jsref/jsref_operators.asp)
+- Information on operators - https://www.w3schools.com/jsref/jsref_operators.asp
 
-- Help with understanding noise - [https://github.com/processing/p5.js/blob/v1.11.11/src/math/noise.js#L36](https://github.com/processing/p5.js/blob/v1.11.11/src/math/noise.js#L36)
+- Help with understanding noise - https://github.com/processing/p5.js/blob/v1.11.11/src/math/noise.js#L36
 
-- learning its best to use 'for' instead of 'forEach' when it came to animating noise - [https://www.geeksforgeeks.org/javascript/difference-between-foreach-and-for-loop-in-javascript] (https://www.geeksforgeeks.org/javascript/difference-between-foreach-and-for-loop-in-javascript)
+- learning its best to use 'for' instead of 'forEach' when it came to animating noise - https://www.geeksforgeeks.org/javascript/difference-between-foreach-and-for-loop-in-javascript
 
-- Helped me figure out how to use certain parts of an arra - [https://www.geeksforgeeks.org/javascript/how-to-get-first-n-number-of-elements-from-an-array-in-javascript](https://www.geeksforgeeks.org/javascript/how-to-get-first-n-number-of-elements-from-an-array-in-javascript)
+- Helped me figure out how to use certain parts of an arra - https://www.geeksforgeeks.org/javascript/how-to-get-first-n-number-of-elements-from-an-array-in-javascript
 
 
 ## Study Notes 

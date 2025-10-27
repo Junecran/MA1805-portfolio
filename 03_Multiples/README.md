@@ -5,7 +5,7 @@
 
 
 
-**Design choices**
+**Design Choices**
 
 -pattern follow widow size - eyes will always follow
 
@@ -32,8 +32,8 @@
 
 ## Study Notes 
 
-*This section is my study notes. I added explanations to the code to help me remember how and why it works. I wanted to keep my notes attached to the project without making a mess of the code. Please ignore this section…. unless it will help getting a better grade.*
-The code Will **not** be finished/ able to copy.
+This section is my study notes. I added explanations to the code to help me remember how and why it works. Please ignore this section…. unless it will help getting a better grade.
+
 
          let t = millis() * timeFactor; 
    let wobbleX1 = sin(t + x * 0.1 + y * 0.1) * wobbleAmount;

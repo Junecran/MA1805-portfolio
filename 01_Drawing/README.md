@@ -25,7 +25,7 @@ This is one of my first times coding so I focused on code readability and unders
 
 ## References Used
 
- - Used Throughout the code - [https://p5js.org/reference](https://p5js.org/reference)
+ - Used Throughout the code - https://p5js.org/reference
 
 Mouse coordinates tool made to limit the trial and error in placing objects. Made with using p5.js References
 
