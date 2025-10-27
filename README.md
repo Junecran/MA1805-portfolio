@@ -1,10 +1,9 @@
-**By Eleanor Craner**
+**Eleanor Craner**
 
-**Main link to Github** - 
+Main link to Github- 
 [https://github.com/Junecran/MA1805-portfolio.git](https://github.com/Junecran/MA1805-portfolio.git)
 
 
-## Projects Index
 # 01 Drawing
 [Drawing](01_Drawing/index.html)
 
