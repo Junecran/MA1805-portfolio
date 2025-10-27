@@ -1,17 +1,23 @@
 # **Movement**
-**MA1805-portfolio**
 
 I set out to explore the hidden layers of grief and the lingering emptiness that follows the loss of a loved one. 
 
 When my dad passed away, our cherished nature walks became haunted by a silence that echoed with his absence. The peaceful trails we once wandered together shifted from places of comfort to landscapes tinged with sorrow. The  bright colors of nature faded into muted shades. However, as time mends hearts, those colors slowly seep back in, and some days, the emptiness feels less overwhelming.
 
+
 **Design choices**
+
 - Although it was simpler to code harsher shapes, I found that all the sharp corners added to the image's atmosphere, giving it a sense of tension and suggesting the harsh experiences of life. 
+
 - Keeping the colours muted conveyed a more melancholy tone. It maintained an underlying sense of hope, making the image more dynamic through the noise in the colours. 
+
 - A darker, pulsing void was added to the presentations of emptiness/grief. I added the pulse effect to suggest fluctuations in feelings of emptiness across different days.
+
 - There is a rough silhouette in the pulsing void to focus on the loss of a loved one, rather than a general feeling of emptiness. 
 
+
 ## Debrief
+
 The objective was to find a more efficient way to code or avoid repetitive code.
 
 - Using an array to store coordinates reduces repetitive code, such as line-drawing. However, figuring out how to unpack the array proved a bit challenging because it required creating new functions.  
