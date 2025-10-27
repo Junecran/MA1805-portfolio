@@ -1,11 +1,10 @@
-# **Movement**
-
+# Movement
 I set out to explore the hidden layers of grief and the lingering emptiness that follows the loss of a loved one. 
 
 When my dad passed away, our cherished nature walks became haunted by a silence that echoed with his absence. The peaceful trails we once wandered together shifted from places of comfort to landscapes tinged with sorrow. The  bright colors of nature faded into muted shades. However, as time mends hearts, those colors slowly seep back in, and some days, the emptiness feels less overwhelming.
 
 
-**Design choices**
+## Design choices
 
 - Although it was simpler to code harsher shapes, I found that all the sharp corners added to the image's atmosphere, giving it a sense of tension and suggesting the harsh experiences of life. 
 
@@ -17,7 +16,6 @@ When my dad passed away, our cherished nature walks became haunted by a silence 
 
 
 ## Debrief
-
 The objective was to find a more efficient way to code or avoid repetitive code.
 
 - Using an array to store coordinates reduces repetitive code, such as line-drawing. However, figuring out how to unpack the array proved a bit challenging because it required creating new functions.  
