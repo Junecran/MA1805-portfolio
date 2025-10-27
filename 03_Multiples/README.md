@@ -17,7 +17,6 @@
 - colour of eye changes each blink, show more emotions 
 - add the resize canvsa to other projects
 
-## Extra code comments 
 
 
 
@@ -73,3 +72,5 @@ The code Will **not** be finished/ able to copy.
     } else if (blinkPhase < eye.blinkDuration * 2) {
       blinkAmount = map(blinkPhase, eye.blinkDuration, eye.blinkDuration * 2, 1, 0);
     }
+
+  ## Extra code comments 
