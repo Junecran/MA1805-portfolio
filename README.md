@@ -5,7 +5,7 @@
 [Website Link](https://junecran.github.io/MA1805-Portfolio/)
 
 
-**01 Drawing**
+### 01 Drawing
 
 [Drawing](01_Drawing/index.html)
 
@@ -14,7 +14,7 @@
 [Accessible Code](01_Drawing/sketch.js)
 
 
-**02 Movement**
+### 02 Movement
 
 [Movement](02_Movement/index.html)
 
@@ -23,7 +23,7 @@
 [Accessible Code](02_Movement/sketch.js)
 
 
-**03 Multiples**
+### 03 Multiples
 
 [Multiples](03_Multiples/index.html)
 
@@ -32,7 +32,7 @@
 [Accessible Code](03_Multiples/sketch.js)
 
 
-**04 Media**
+### 04 Media
 
 [Media](04_Media/index.html)
 
