@@ -15,7 +15,7 @@
 
 - make the mouse increase blinking speed 
 - colour of eye changes each blink, show more emotions 
-
+- add the resize canvsa to other projects
 
 ## Extra code comments 
 

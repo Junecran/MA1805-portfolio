@@ -5,7 +5,7 @@ function setup() {
 }
 
 function draw() {
-   // -- Customise Key -- // For easy access.
+   // -- Customise Key -- // 
 let bc = color(138, 17, 23); // Body
 let eyew = color(250, 250, 250); // Eye whites
 let eyei = color(0, 0, 0); // Eye iris
