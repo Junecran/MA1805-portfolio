@@ -6,21 +6,21 @@
 
 
 # 01 Drawing
-[Drawing](01-Drawing/index.html)
+[Drawing](01_Drawing/index.html)
 
 [Drawing ReadMe](01_Drawing/README.md)
 
 # 02 Movement
-[Movement](02.Movement/index.html)
+[Movement](02_Movement/index.html)
 
-[Movement ReadMe](02.Movement/README.md)
+[Movement ReadMe](02_Movement/README.md)
 
 # 03 multiples
-[Multiples](03.Multiples/index.html)
+[Multiples](03_Multiples/index.html)
 
-[Multiples ReadMe](03.Multiples/README.md)
+[Multiples ReadMe](03_Multiples/README.md)
 
 # 04 Media 
-[Media](04.Media/index.html)
+[Media](04_Media/index.html)
 
-[Media ReadMe](04.Media/README.md)
+[Media ReadMe](04_Media/README.md)
