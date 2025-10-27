@@ -1,4 +1,4 @@
-# **Drawing**
+### **Description**
 
 The emoji represents the challenging relationship between humans and technology. Whether caused by computer crashes resulting in lost work, programming language barriers, or anxieties about AI's influence, we must navigate both the benefits and drawbacks in our tech-centered lives.
 
@@ -26,7 +26,6 @@ This is one of my first times coding so I focused on code readability and unders
 ## References Used
 
  - Used Throughout the code - https://p5js.org/reference
-
 
 
 ### Extra code comments  

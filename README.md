@@ -1,4 +1,4 @@
-### Eleanor Craner
+**Eleanor Craner**
 
 [GitHub Link](https://github.com/Junecran/MA1805-Portfolio.git)
 
