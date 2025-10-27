@@ -28,9 +28,7 @@ This is one of my first times coding so I focused on code readability and unders
 
  - Used Throughout the code - https://p5js.org/reference
 
-
-     // Mouse coordinates tool made to limit the trial and error in placing objects. Made with using p5.js References
-
+     // Mouse coordinates tool
      background(250);
      text(`x: ${mouseX} y: ${mouseY}`, 50, 50);
      stroke(0); 
