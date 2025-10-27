@@ -5,11 +5,13 @@ The emoji represents the challenging relationship between humans and technology.
 My own experiences with coding capture this tension: I enjoy it, but its tedious and frustrating moments made me want to bite my laptop — a sentiment some can relate to. This feeling directly inspired the imagery of the emoji.
 
 
-## **Design choices**
+## **Design Choices**
 
 - The cartoon style of the emoji made better storytelling visuals and kept the appearance light-hearted.
 
-- I chose blue and red as the main colors for their symbolism. Blue represents logic and intellect, while red stands for anger and passion. Red and blue are complementary and highlight the contrast between humans and computers. At the same time, blue(technology) and red(humans) work well together both metaphorically and visually.
+- I chose blue and red as the main colors for their symbolism. Blue represents logic and intellect, while red stands for anger and passion. 
+
+- Red and blue are complementary and highlight the contrast between humans and computers. At the same time, blue(technology) and red(humans) work well together both metaphorically and visually.
 
 
 ## Debrief
@@ -27,7 +29,7 @@ This is one of my first times coding so I focused on code readability and unders
  - Used Throughout the code - https://p5js.org/reference
 
 
-### Extra code comments  
+**Extra Code Comments**
  Mouse coordinates tool made to limit the trial and error in placing objects. Made with using p5.js References
 
      background(250);
