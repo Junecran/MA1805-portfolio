@@ -52,7 +52,4 @@ This section is my study notes. I added explanations to the code to help me reme
 
 - **sin() and cos()** return smooth, looping values between -1 and 1.
 
-- variable storing how much the eye is closed at this point in the cycle:   **let blinkAmount = 0;**
-
-    0 → fully open
-    1 → fully closed
+- variable storing how much the eye is closed at this point in the cycle: **let blinkAmount = 0;** - 0 → fully open, 1 → fully closed
