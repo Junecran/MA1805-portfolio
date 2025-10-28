@@ -1,78 +1,60 @@
-# **Multiples**
+# Multiples
+Blinking popped into my head as the perfect example of repetition, and the more I explored it, the more fascinating details I uncovered about this simple act we perform every moment.
 
-- blinking meaning
-
-
-
-
-**Design Choices**
-
--pattern follow widow size - eyes will always follow
+Research into blinking patterns reveals a powerful connection to our thoughts and feelings. Our blink rate jumps during moments of excitement or anxiety. Some researchers even believe each of us has a unique 'blinkprint,' shaped by the rhythm and style of our blinks. It is a vivid reminder that our eyes truly offer a window into the soul.
 
 
+## Design Choices
+
+- I selected bold colours to breathe energy into the simple design.
+
+- I designed the blinking pattern to highlight our shared humanity despite unique blinkprints, and to show that blinking serves a purpose beyond mere chance. 
+
+- I allowed the eye pattern to shift with the window size, hinting at the countless eyes across the world. When the window is fully open, it suggests a sense of solidarity, even if it feels a little uncanny.
+
+- I imagined that eye-tracking the mouse would add a playful, interactive twist.
 
 
 ## Debrief
 
-- make the mouse increase blinking speed 
-- colour of eye changes each blink, show more emotions 
-- add the resize canvsa to other projects
+- I enjoyed the coding part of this project a lot more because using a loop made drawing all the eyes more efficient. 
 
+- I chose a simple design so I could concentrate on playful features—something I plan to consider in future projects. 
 
+- I wanted to create a mouse-clicking multiplier for the blinking rate, but I struggled to implement it.
 
-
-
+- I also wished to add features such as a clickable eye-blink effect, explore different blinking patterns, and change eye colors with each blink.
 
 ## References Used
 
 - Used Throughout the code focused on atan2() and millis() - https://p5js.org/reference
 
-- put referecne for study notes
-
+- Animation Help - https://cratecode.com/info/p5js-animation-basics?utm_source=chatgpt.com
 
 ## Study Notes 
 
 This section is my study notes. I added explanations to the code to help me remember how and why it works. Please ignore this section…. unless it will help getting a better grade.
 
 
-         let t = millis() * timeFactor; 
-   let wobbleX1 = sin(t + x * 0.1 + y * 0.1) * wobbleAmount;
-   let wobbleY1 = cos(t + y * 0.1 + x * 0.1) * wobbleAmount;
-   let wobbleX2 = cos(t + x * 0.2) * wobbleAmount;
-   let wobbleY2 = sin(t + y * 0.2) * wobbleAmount;
-  colourCircle(x - 11 + wobbleX1, y + 7 + wobbleY1, 7, color(240, 240, 240));
-  colourCircle(x + 11 + wobbleX2, y - 7 + wobbleY2, 14, color(240, 240, 240));
-  // Eyelids
-  fill(color(colours.main));
-  noStroke();
-   let lidHeight = 200 * blink;
-  arc(x, y - 30, 100, lidHeight, 0, PI, CHORD);
+// A nested loop — it repeats, Sosay, cols = 5 and rows = 3, it would generate a 5×3 grid
 
+     for (let x = 0; x < cols; x++) 
+     for (let y = 0; y < rows; y++) 
 
-  for (let x = 0; x < cols; x++) 
-    for (let y = 0; y < rows; y++) 
-     let xpos = x * spacing + spacing / 2;
-     let ypos = y * spacing + spacing / 2;
+// The offset depends on its grid position (x + y), eyes blink in a wave-like pattern instead of all at once.
 
       let blinkOffset = (x + y) * 100;
 
-  // Eye Array //
-      eyes.push
-        x: xpos,
-        y: ypos,
-        blinkOffset: blinkOffset,
-        blinkDuration: 200
+    
+// variable storing how much the eye is closed at this point in the cycle:
+* 0 → fully open
+* 1 → fully closed
 
-
-
-    for (let eye of eyes) 
-    let blinkPhase = (time + eye.blinkOffset) %2000;
     let blinkAmount = 0;
 
-    if (blinkPhase < eye.blinkDuration) {
-      blinkAmount = map(blinkPhase, 0, eye.blinkDuration, 0, 1);
-    } else if (blinkPhase < eye.blinkDuration * 2) {
-      blinkAmount = map(blinkPhase, eye.blinkDuration, eye.blinkDuration * 2, 1, 0);
-    }
 
-  ## Extra code comments 
+## Info 
+
+- **millis()** returns the number of milliseconds since the program started.
+
+- **sin() and cos()** return smooth, looping values between -1 and 1.
