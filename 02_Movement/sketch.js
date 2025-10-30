@@ -219,7 +219,7 @@ function draw() {
   translate(-60, -90);// Add push() and pop() if needed.
   ShapeColour(sky, colours.sky); // Here for order.
 
-// Clouds 
+  // Clouds //
   clouds.forEach(cloud => {
    push();
     translate(cloud.x, cloud.y);
@@ -233,8 +233,8 @@ function draw() {
  cloud.x -= 0.2;
  if(cloud.x + cloud.w < 0) cloud.x = width + cloud.w;
  });
-
-// Drawing Shapes Command
+ 
+// Drawing Shapes Command //
  push();
   for (let shape in objects) {
    ShapeColour(objects[shape], colours[shape], 18);

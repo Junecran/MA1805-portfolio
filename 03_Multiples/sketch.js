@@ -36,7 +36,6 @@ function eyeDraw(x, y, blink) {
   colourCircle(x, y, 60, color(colours.eyeWhite)); 
   colourCircle(irisX, irisY, 30, color(colours.iris)); 
   colourCircle(irisX, irisY, 22, color(colours.pupil));
-
 // Highlight wobble 
    let t = millis() * timeFactor; 
    let wobbleX1 = sin(t + x * 0.1 + y * 0.1) * wobbleAmount;
@@ -46,7 +45,6 @@ function eyeDraw(x, y, blink) {
 
   colourCircle(irisX - 11 + wobbleX1, irisY + 7 + wobbleY1, 7, color(colours.highlight));
   colourCircle(irisX + 11 + wobbleX2, irisY - 7 + wobbleY2, 14, color(colours.highlight));
-
 // Eyelids
  fill(color(colours.main));
  noStroke();
@@ -60,7 +58,7 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
   background(color(colours.main));
 
- // Eye Grid Data //
+  // Eye Grid Data //
   let cols = (width / spacing);
   let rows = (height / spacing);
 
@@ -69,8 +67,7 @@ function windowResized() {
      let xpos = x * spacing + spacing / 2;
      let ypos = y * spacing + spacing / 2;
      let blinkOffset = (x + y) * 100;
-
-  // Eye Array //
+// Eye Array 
       eyes.push({
         x: xpos,
         y: ypos,
