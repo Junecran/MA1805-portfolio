@@ -1,8 +1,13 @@
 # **Media**
+ sketch uses microphone input (sound) to generate rain and lightning — a natural, emotional metaphor. can frame this as a reflection on how sound and emotion shape perception of the environment.
 
+Integrate images or video that represent cultural associations with rain (renewal, melancholy, cleansing, climate change, etc.).
 
+Use audio not just as input, but as meaningful content (e.g. spoken word, protest chants, rainfall sounds).
+
+Reflect on how your visual choices reshape those cultural meanings — e.g., turning noise (chaos) into something beautiful and natural.
 **Design Choices**
-
+- couldnt find a png that fit the style so found a way to make a parcticle without
 
 
 
@@ -16,6 +21,7 @@
 rain
 https://editor.p5js.org/Yonathan29/sketches/uDmXvRuOZ
 https://editor.p5js.org/monicawen/sketches/HkU-BCJqm
+https://editor.p5js.org/Hyunw/sketches/vy_Y59Q6l
 
 mic ? 
 https://editor.p5js.org/weberwong/sketches/wuOW_5eZU

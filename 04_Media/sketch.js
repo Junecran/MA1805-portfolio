@@ -1,5 +1,5 @@
 
-// -- Settings -- //
+   // -- Settings -- //
 let sensitivity = 1; 
 let mic;
 let raindrops = [];
@@ -8,9 +8,19 @@ let lightningAlpha = 0;
 let rainVariant = 0;
 let micStarted = false;
 let keyX, keyY, spacing;
+let walkFrames = [];
+let currentFrame = 0;
+let frameSpeed = 6; // lower = faster
+let walkerX = 0;
 
+  // Image Setup //
+function preload() {
+  for (let i = 1; i <= 4; i++) {
+    walkFrames.push(loadImage(`walking${i}.png`));
+  }
+}
 
-// -- Setup -- //
+   // -- Setup -- //
 function setup() {
   createCanvas(windowWidth, windowHeight);
   updateKeyPositions();  
