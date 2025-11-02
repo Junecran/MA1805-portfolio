@@ -18,64 +18,21 @@ Reflect on how your visual choices reshape those cultural meanings — e.g., tur
 
 
 ## References Used
-rain
-https://editor.p5js.org/Yonathan29/sketches/uDmXvRuOZ
-https://editor.p5js.org/monicawen/sketches/HkU-BCJqm
-https://editor.p5js.org/Hyunw/sketches/vy_Y59Q6l
+- Made my own little walking animation with - https://ucbugg-adfa.wixsite.com/adfa/animation-lab-2-walk-cycles
 
-mic ? 
-https://editor.p5js.org/weberwong/sketches/wuOW_5eZU
-https://github.com/processing/p5.js/blob/v1.11.11/lib/addons/p5.sound.js#L6098
+- References i used to help me with the rain animation - https://editor.p5js.org/Yonathan29/sketches/uDmXvRuOZ, https://editor.p5js.org/Hyunw/sketches/vy_Y59Q6l
+
+- References to understand how the mic function works - https://editor.p5js.org/weberwong/sketches/wuOW_5eZU, https://github.com/processing/p5.js/blob/v1.11.11/lib/addons/p5.sound.js#L6098
+
+- Inspiration for the 'Splashes' but decide to keep it array form - https://code.tutsplus.com/generating-a-particle-system-with-javascript--net-
+
+- Used for better understanding of array - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from
+
 
 ## Study Notes 
 
-This section is my study notes. I added explanations to the code to help me remember how and why it works. Please ignore this section…. unless it will help getting a better grade.
+This section is my study notes. I added explanations to the code to help me remember how and why it works. Please ignore this section... unless it will help getting a better grade.
 
 
-lightningAlpha -= 10; - a subtraction assignment
+lightningAlpha -= 1; - a subtraction assignment
 
-let rainIntensity = vol < 0.02 ? 0 : vol < 0.1 ? 50 : 200; - condition ? valueIfTrue : valueIfFalse is the ternary syntax.
-
-  // Raindrop Function //
-function createDrop() 
-  let r = random(0, 20);
-  return {
-    x: random(width),
-    y: random(-400, 0),
-    r: r,
-    len: map(r, 0, 20, 10, 20),
-    yspeed: map(r, 0, 20, 4, 10),
-    xspeed: wind * r * 0.2 + random(-0.5, 0.5)
-  };
-
-
-  // Splash Function //
-function createSplash(x, y) 
-  return {
-    particles: Array.from({ length: 5 }, () => ({
-      x,
-      y,
-      vx: random(-1, 1),
-      vy: random(-3, -1),
-      alpha: 255
-    }))
-  };
-
-  for (let i = splashes.length - 1; i >= 0; i--) 
-  let sp = splashes[i];
-  for (let p of sp.particles) {
-    p.x += p.vx;
-    p.y += p.vy;
-    p.vy += 0.1;
-
-    p.alpha -= 10; // Gradually fade out - slower fade.
-  }
-  noStroke();
-  fill(173, 216, 230, 30);
-  for (let p of sp.particles) {
-    fill(173, 216, 230, p.alpha);
-    ellipse(p.x, p.y, 2, 2);
-  }
-
-  if (sp.particles.every(p => p.alpha <= 0)) 
-    splashes.splice(i, 1);

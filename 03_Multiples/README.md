@@ -29,7 +29,7 @@ Research into blinking patterns reveals a powerful connection to our thoughts an
 
 - Used Throughout the code focused on atan2() and millis() - https://p5js.org/reference
 
-- Animation Help - https://cratecode.com/info/p5js-animation-basics?utm_source=chatgpt.com
+- Animation Help - https://cratecode.com/info/p5js-animation-basics
 
 ## Study Notes 
 
